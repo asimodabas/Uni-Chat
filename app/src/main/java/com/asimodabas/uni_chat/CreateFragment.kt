@@ -7,14 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.asimodabas.uni_chat.databinding.FragmentCreateBinding
 import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class LoginFragment : Fragment() {
+class CreateFragment : Fragment() {
 
-    private var _binding: FragmentLoginBinding? = null
+    private var _binding: FragmentCreateBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth : FirebaseAuth
 
@@ -29,7 +30,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentCreateBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -37,30 +38,24 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.signupButton.setOnClickListener {
+        binding.createButton.setOnClickListener {
 
-                val action =LoginFragmentDirections.actionLoginFragmentToCreateFragment()
-                findNavController().navigate(action)
-
-        }
-
-        binding.loginButton.setOnClickListener {
-            auth.signInWithEmailAndPassword(binding.emailText.text.toString(),binding.passwordText.text.toString()).addOnSuccessListener {
-
-                val action =LoginFragmentDirections.actionLoginFragmentToChatFragment()
+            auth.createUserWithEmailAndPassword(binding.emailEditText.text.toString(),binding.passwordEditText.text.toString()).addOnSuccessListener {
+                val action =CreateFragmentDirections.actionCreateFragmentToChatFragment()
                 findNavController().navigate(action)
 
             }.addOnFailureListener {
-                Toast.makeText(requireContext(),it.localizedMessage,Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(),it.localizedMessage, Toast.LENGTH_LONG).show()
 
             }
         }
-
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 
 }
