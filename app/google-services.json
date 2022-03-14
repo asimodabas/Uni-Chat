@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "393252806472",
+    "project_id": "chatapp-67fb7",
+    "storage_bucket": "chatapp-67fb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393252806472:android:f1e02a2c5b5d33ffa71d7d",
+        "android_client_info": {
+          "package_name": "com.asimodabas.uni_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393252806472-16hepk2gmef49lti0vgmpu5018drjtk9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApPhO4WFfyJf7r58_MWPI9_mFUiAJ4eII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393252806472-16hepk2gmef49lti0vgmpu5018drjtk9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

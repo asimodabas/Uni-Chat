@@ -28,6 +28,15 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.signupButton.setOnClickListener {
+
+        }
+
+        binding.loginButton.setOnClickListener {
+
+        }
+
     }
 
     override fun onDestroyView() {
