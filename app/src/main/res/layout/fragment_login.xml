@@ -13,7 +13,7 @@
         android:id="@+id/imageView3"
         android:layout_width="168dp"
         android:layout_height="121dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="110dp"
         android:src="@drawable/logo2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

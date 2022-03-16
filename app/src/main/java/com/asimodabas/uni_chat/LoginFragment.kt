@@ -54,7 +54,7 @@ class LoginFragment : Fragment() {
             if (email.equals("") || password.equals("")) {
                 Toast.makeText(
                     context,
-                    "Lütfen Uni-Chat'e giriş yapmak için bilgilerinizi eksiksiz giriniz.",
+                    "Lütfen Uni-Chat'e giriş yapmak için bilgilerinizi doğru giriniz.",
                     Toast.LENGTH_LONG
                 ).show()
             } else {

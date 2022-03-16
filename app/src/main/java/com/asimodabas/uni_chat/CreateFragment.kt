@@ -45,7 +45,7 @@ class CreateFragment : Fragment() {
 
 
         binding.createButton.setOnClickListener {
-
+            
             auth.createUserWithEmailAndPassword(
                 binding.emailEditText.text.toString(),
                 binding.passwordEditText.text.toString()
