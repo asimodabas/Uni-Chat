@@ -16,7 +16,7 @@
 
     <EditText
         android:id="@+id/chatText"
-        android:layout_width="297dp"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:ems="10"
@@ -29,7 +29,10 @@
         android:id="@+id/sendButton"
         android:layout_width="100dp"
         android:layout_height="45dp"
+        android:layout_marginStart="11dp"
+        android:backgroundTint="#000000"
         android:text="Gönder"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/chatText" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -59,7 +59,7 @@
         android:background="@drawable/edittext_background"
         android:ems="10"
         android:hint="Şifre"
-        android:inputType="textPersonName"
+        android:inputType="textPersonName|textPassword"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
