@@ -17,12 +17,12 @@ class CreateFragment : Fragment() {
 
     private var _binding: FragmentCreateBinding? = null
     private val binding get() = _binding!!
-    private lateinit var auth : FirebaseAuth
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        auth= Firebase.auth
+        auth = Firebase.auth
 
     }
 
@@ -38,15 +38,33 @@ class CreateFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val email2 = binding.emailEditText.text.toString()
+        val name = binding.nameEditText.text.toString()
+        val surname = binding.surnameEditText.text.toString()
+        val passwrd2 = binding.passwordEditText.text.toString()
+
+
         binding.createButton.setOnClickListener {
 
-            auth.createUserWithEmailAndPassword(binding.emailEditText.text.toString(),binding.passwordEditText.text.toString()).addOnSuccessListener {
-                val action =CreateFragmentDirections.actionCreateFragmentToChatFragment()
-                findNavController().navigate(action)
+            if (email2.equals("") || passwrd2.equals("") || name.equals("") || surname.equals("")) {
+                Toast.makeText(
+                    context,
+                    "Lütfen Uni-Chat'e kayıt olmak için bilgilerinizi eksiksiz giriniz.",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
 
-            }.addOnFailureListener {
-                Toast.makeText(requireContext(),it.localizedMessage, Toast.LENGTH_LONG).show()
+                auth.createUserWithEmailAndPassword(
+                    binding.emailEditText.text.toString(),
+                    binding.passwordEditText.text.toString()
+                ).addOnSuccessListener {
+                    val action = CreateFragmentDirections.actionCreateFragmentToChatFragment()
+                    findNavController().navigate(action)
 
+                }.addOnFailureListener {
+                    Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
+
+                }
             }
         }
     }

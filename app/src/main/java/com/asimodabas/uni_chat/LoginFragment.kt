@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -16,12 +17,20 @@ class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-    private lateinit var auth : FirebaseAuth
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        auth= Firebase.auth
+        auth = Firebase.auth
+
+        val currentUser = auth.currentUser
+
+        if (currentUser != null) {
+            val action = LoginFragmentDirections.actionLoginFragmentToChatFragment()
+            findNavController().navigate(action)
+        }
+
 
     }
 
@@ -37,23 +46,35 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.signupButton.setOnClickListener {
+        val email = binding.emailText.text.toString()
+        val passwrd = binding.passwordText.text.toString()
 
-                val action =LoginFragmentDirections.actionLoginFragmentToCreateFragment()
-                findNavController().navigate(action)
-
-        }
 
         binding.loginButton.setOnClickListener {
-            auth.signInWithEmailAndPassword(binding.emailText.text.toString(),binding.passwordText.text.toString()).addOnSuccessListener {
+            if (email.equals("") || passwrd.equals("")) {
+                Toast.makeText(
+                    context,
+                    "Lütfen Uni-Chat'e giriş yapmak için doğru E-Mail ve Şifre giriniz.",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
 
-                val action =LoginFragmentDirections.actionLoginFragmentToChatFragment()
-                findNavController().navigate(action)
+                auth.signInWithEmailAndPassword(email, passwrd).addOnSuccessListener {
 
-            }.addOnFailureListener {
-                Toast.makeText(requireContext(),it.localizedMessage,Toast.LENGTH_LONG).show()
+                    val action = LoginFragmentDirections.actionLoginFragmentToChatFragment()
+                    findNavController().navigate(action)
 
+                }.addOnFailureListener {
+                    Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
+
+                }
             }
+        }
+        binding.signupButton.setOnClickListener {
+
+            val action = LoginFragmentDirections.actionLoginFragmentToCreateFragment()
+            findNavController().navigate(action)
+
         }
 
     }
