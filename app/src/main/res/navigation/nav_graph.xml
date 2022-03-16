@@ -21,7 +21,11 @@
         android:id="@+id/chatFragment"
         android:name="com.asimodabas.uni_chat.ChatFragment"
         android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" />
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_chatFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/createFragment"
         android:name="com.asimodabas.uni_chat.CreateFragment"

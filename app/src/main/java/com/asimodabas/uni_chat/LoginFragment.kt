@@ -46,20 +46,22 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val email = binding.emailText.text.toString()
-        val passwrd = binding.passwordText.text.toString()
-
-
         binding.loginButton.setOnClickListener {
-            if (email.equals("") || passwrd.equals("")) {
+
+            val email = binding.emailText.text.toString()
+            val password = binding.passwordText.text.toString()
+
+            if (email.equals("") || password.equals("")) {
                 Toast.makeText(
                     context,
-                    "Lütfen Uni-Chat'e giriş yapmak için doğru E-Mail ve Şifre giriniz.",
+                    "Lütfen Uni-Chat'e giriş yapmak için bilgilerinizi eksiksiz giriniz.",
                     Toast.LENGTH_LONG
                 ).show()
             } else {
-
-                auth.signInWithEmailAndPassword(email, passwrd).addOnSuccessListener {
+                auth.signInWithEmailAndPassword(
+                    binding.emailText.text.toString(),
+                    binding.passwordText.text.toString()
+                ).addOnSuccessListener {
 
                     val action = LoginFragmentDirections.actionLoginFragmentToChatFragment()
                     findNavController().navigate(action)
@@ -69,6 +71,7 @@ class LoginFragment : Fragment() {
 
                 }
             }
+
         }
         binding.signupButton.setOnClickListener {
 
