@@ -31,7 +31,6 @@ class LoginFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-
     }
 
     override fun onCreateView(

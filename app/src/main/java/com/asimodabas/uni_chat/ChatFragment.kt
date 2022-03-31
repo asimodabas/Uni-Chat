@@ -19,14 +19,14 @@ class ChatFragment : Fragment() {
     private var _binding: FragmentChatBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
-    private lateinit var firestore : FirebaseFirestore
+    private lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setHasOptionsMenu(true)
 
-        auth=Firebase.auth
+        auth = Firebase.auth
         firestore = Firebase.firestore
 
     }
@@ -50,16 +50,16 @@ class ChatFragment : Fragment() {
                 val chatText = binding.chatText.text.toString()
                 val date = FieldValue.serverTimestamp()
 
-                val dataMap=HashMap<String,Any>()
+                val dataMap = HashMap<String, Any>()
 
-                dataMap.put("text",chatText)
-                dataMap.put("user",user!!)
-                dataMap.put("date",date)
+                dataMap.put("text", chatText)
+                dataMap.put("user", user!!)
+                dataMap.put("date", date)
 
                 firestore.collection("Public-Chat").add(dataMap).addOnSuccessListener {
                     binding.chatText.setText("")
                 }.addOnFailureListener {
-                    Toast.makeText(requireContext(),it.localizedMessage,Toast.LENGTH_LONG).show()
+                    Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
                     binding.chatText.setText("")
                 }
             }
@@ -69,14 +69,14 @@ class ChatFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
 
-        inflater.inflate(R.menu.lagout_menu,menu)
+        inflater.inflate(R.menu.lagout_menu, menu)
 
         super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        if (item.itemId == R.id.signout){
+        if (item.itemId == R.id.signout) {
             auth.signOut()
 
             val action = ChatFragmentDirections.actionChatFragmentToLoginFragment()
@@ -91,7 +91,6 @@ class ChatFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 
 
 }
