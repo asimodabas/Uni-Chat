@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -65,6 +66,29 @@ class ChatFragment : Fragment() {
             }
         }
 
+        firestore.collection("Public-Chat").orderBy("date",Query.Direction.ASCENDING).addSnapshotListener { value, error ->
+
+            if (error != null){
+                Toast.makeText(requireContext(),error.localizedMessage,Toast.LENGTH_SHORT).show()
+            }else{
+                if (value !=null){
+                        if (value.isEmpty){
+                            Toast.makeText(requireContext(),"Mesaj Yok",Toast.LENGTH_SHORT).show()
+                    }else{
+
+                        // Data pulled from firebase database
+
+                        val documents = value.documents
+
+                          for (document in documents){
+                              val text = document.get("text") as String
+                              val user = document.get("user") as String
+                              // println(text)
+                          }
+                        }
+                }
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
