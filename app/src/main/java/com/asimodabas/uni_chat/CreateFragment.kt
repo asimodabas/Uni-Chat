@@ -38,25 +38,33 @@ class CreateFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val email2 = binding.emailEditText.text.toString()
-        val name = binding.nameEditText.text.toString()
-        val surname = binding.surnameEditText.text.toString()
-        val pass = binding.passwordEditText.text.toString()
-
-
         binding.createButton.setOnClickListener {
-            
-            auth.createUserWithEmailAndPassword(
-                binding.emailEditText.text.toString(),
-                binding.passwordEditText.text.toString()
-            ).addOnSuccessListener {
-                val action = CreateFragmentDirections.actionCreateFragmentToChatFragment()
-                findNavController().navigate(action)
 
-            }.addOnFailureListener {
-                Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
+            val email = binding.emailEditText.text.toString()
+            val name = binding.nameEditText.text.toString()
+            val surname = binding.surnameEditText.text.toString()
+            val pass = binding.passwordEditText.text.toString()
 
+            if (email.isNotEmpty() && name.isNotEmpty() && surname.isNotEmpty() && pass.isNotEmpty()) {
+
+                auth.createUserWithEmailAndPassword(
+                    binding.emailEditText.text.toString(),
+                    binding.passwordEditText.text.toString()
+                ).addOnSuccessListener {
+                    val action = CreateFragmentDirections.actionCreateFragmentToChatFragment()
+                    findNavController().navigate(action)
+
+                }.addOnFailureListener {
+                    Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
+                }
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    "Lütfen Uni-Chat'e kaydolmak için bilgilerinizi eksiksiz giriniz",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
+
         }
     }
 

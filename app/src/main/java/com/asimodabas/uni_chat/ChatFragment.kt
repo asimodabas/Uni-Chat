@@ -66,29 +66,31 @@ class ChatFragment : Fragment() {
             }
         }
 
-        firestore.collection("Public-Chat").orderBy("date",Query.Direction.ASCENDING).addSnapshotListener { value, error ->
+        firestore.collection("Public-Chat").orderBy("date", Query.Direction.ASCENDING)
+            .addSnapshotListener { value, error ->
 
-            if (error != null){
-                Toast.makeText(requireContext(),error.localizedMessage,Toast.LENGTH_SHORT).show()
-            }else{
-                if (value !=null){
-                        if (value.isEmpty){
-                            Toast.makeText(requireContext(),"Mesaj Yok",Toast.LENGTH_SHORT).show()
-                    }else{
+                if (error != null) {
+                    Toast.makeText(requireContext(), error.localizedMessage, Toast.LENGTH_SHORT)
+                        .show()
+                } else {
+                    if (value != null) {
+                        if (value.isEmpty) {
+                            Toast.makeText(requireContext(), "Mesaj Yok", Toast.LENGTH_SHORT).show()
+                        } else {
 
-                        // Data pulled from firebase database
+                            // Data pulled from firebase database
 
-                        val documents = value.documents
+                            val documents = value.documents
 
-                          for (document in documents){
-                              val text = document.get("text") as String
-                              val user = document.get("user") as String
-                              // println(text)
-                          }
+                            for (document in documents) {
+                                val text = document.get("text") as String
+                                val user = document.get("user") as String
+                                // println(text)
+                            }
                         }
+                    }
                 }
             }
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
