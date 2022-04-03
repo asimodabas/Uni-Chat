@@ -5,6 +5,7 @@ import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.asimodabas.uni_chat.databinding.FragmentChatBinding
 import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -21,6 +22,8 @@ class ChatFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
+    private lateinit var adapter : ChatRecyclerAdapter
+    private var chats = arrayListOf<UniChat>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +46,10 @@ class ChatFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        adapter= ChatRecyclerAdapter()
+        binding.chatRecyclerView.adapter = adapter
+        binding.chatRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         binding.sendButton.setOnClickListener {
 
@@ -82,6 +89,8 @@ class ChatFragment : Fragment() {
 
                             val documents = value.documents
 
+                            chats.clear() //dump existing messages before loop
+
                             for (document in documents) {
                                 val text = document.get("text") as String
                                 val user = document.get("user") as String
@@ -89,6 +98,10 @@ class ChatFragment : Fragment() {
                                 // println(text)
 
                                 val chat = UniChat(user, text)
+
+                                chats.add(chat)
+                                //ChatFragment chats == ChatRecyclerAdapter chats
+                                adapter.chats = chats
 
                             }
                         }
