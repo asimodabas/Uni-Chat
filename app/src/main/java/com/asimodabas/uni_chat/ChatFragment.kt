@@ -85,7 +85,11 @@ class ChatFragment : Fragment() {
                             for (document in documents) {
                                 val text = document.get("text") as String
                                 val user = document.get("user") as String
+
                                 // println(text)
+
+                                val chat = UniChat(user, text)
+
                             }
                         }
                     }
