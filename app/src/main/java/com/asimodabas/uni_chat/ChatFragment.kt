@@ -105,6 +105,9 @@ class ChatFragment : Fragment() {
 
                             }
                         }
+
+                        adapter.notifyDataSetChanged()
+
                     }
                 }
             }
