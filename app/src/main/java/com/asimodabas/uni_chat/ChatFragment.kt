@@ -22,7 +22,7 @@ class ChatFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
-    private lateinit var adapter : ChatRecyclerAdapter
+    private lateinit var adapter: ChatRecyclerAdapter
     private var chats = arrayListOf<UniChat>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,7 +47,7 @@ class ChatFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        adapter= ChatRecyclerAdapter()
+        adapter = ChatRecyclerAdapter()
         binding.chatRecyclerView.adapter = adapter
         binding.chatRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
