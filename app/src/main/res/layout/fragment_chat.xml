@@ -6,12 +6,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C5C3BF"
     tools:context=".ChatFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#C5C3BF"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@+id/chatText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +27,7 @@
         android:layout_marginStart="3dp"
         android:layout_marginEnd="19dp"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/edittext_background"
+        android:background="@drawable/send_message_background"
         android:ems="10"
         android:hint="Göndermek için mesaj yazınız."
         android:inputType="textPersonName"
