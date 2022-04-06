@@ -11,6 +11,8 @@ import com.asimodabas.uni_chat.databinding.FragmentCreateBinding
 import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class CreateFragment : Fragment() {
@@ -18,10 +20,13 @@ class CreateFragment : Fragment() {
     private var _binding: FragmentCreateBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
+    private lateinit var firestore: FirebaseFirestore
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        firestore = Firebase.firestore
         auth = Firebase.auth
 
     }
@@ -51,8 +56,26 @@ class CreateFragment : Fragment() {
                     binding.emailEditText.text.toString(),
                     binding.passwordEditText.text.toString()
                 ).addOnSuccessListener {
-                    val action = CreateFragmentDirections.actionCreateFragmentToChatFragment()
-                    findNavController().navigate(action)
+
+                    val dataMap = HashMap<String, Any>()
+
+                    dataMap.put("name", name)
+                    dataMap.put("surname", surname)
+                    dataMap.put("email", email)
+
+                    firestore.collection("Users").add(dataMap).addOnSuccessListener {
+
+                        binding.nameEditText.setText("")
+                        binding.surnameEditText.setText("")
+
+                        val action = CreateFragmentDirections.actionCreateFragmentToChatFragment()
+                        findNavController().navigate(action)
+
+                    }.addOnFailureListener {
+                        Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
+                        binding.nameEditText.setText("")
+                        binding.surnameEditText.setText("")
+                    }
 
                 }.addOnFailureListener {
                     Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
