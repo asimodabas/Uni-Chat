@@ -1,6 +1,7 @@
 package com.asimodabas.uni_chat
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -47,8 +48,15 @@ class LoginFragment : Fragment() {
 
         binding.loginButton.setOnClickListener {
 
-            val email = binding.emailText.text.toString()
-            val password = binding.passwordText.text.toString()
+            val email = binding.emailText.text.toString().trim()
+            val password = binding.passwordText.text.toString().trim()
+
+            if (TextUtils.isEmpty(email)){
+                binding.emailText.error = "Lütfen geçerli bir mail adresi giriniz."
+            }
+            if (TextUtils.isEmpty(email)){
+                binding.passwordText.error = "Lütfen geçerli bir şifre giriniz."
+            }
 
             if (email.equals("") || password.equals("")) {
                 Toast.makeText(

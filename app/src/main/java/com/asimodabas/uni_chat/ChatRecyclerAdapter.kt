@@ -38,9 +38,9 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
     override fun getItemViewType(position: Int): Int {
 
         val chat = chats.get(position)
-        if (chat.user==FirebaseAuth.getInstance().currentUser?.email.toString()){
+        if (chat.user == FirebaseAuth.getInstance().currentUser?.email.toString()) {
             return VİEW_TYPE_MESSAGE_SEND
-        }else{
+        } else {
             return VİEW_TYPE_MESSAGE_RECEIVED
         }
 
@@ -48,14 +48,16 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatHolder {
 
-        if (viewType ==VİEW_TYPE_MESSAGE_RECEIVED){
+        if (viewType == VİEW_TYPE_MESSAGE_RECEIVED) {
             val view =
-                LayoutInflater.from(parent.context).inflate(R.layout.recycler_row_chat, parent, false)
+                LayoutInflater.from(parent.context)
+                    .inflate(R.layout.recycler_row_chat, parent, false)
             return ChatHolder(view)
 
-        }else{
+        } else {
             val view =
-                LayoutInflater.from(parent.context).inflate(R.layout.recycler_row_chat_right, parent, false)
+                LayoutInflater.from(parent.context)
+                    .inflate(R.layout.recycler_row_chat_right, parent, false)
             return ChatHolder(view)
 
         }

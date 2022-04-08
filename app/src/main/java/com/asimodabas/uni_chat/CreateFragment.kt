@@ -72,7 +72,8 @@ class CreateFragment : Fragment() {
                         findNavController().navigate(action)
 
                     }.addOnFailureListener {
-                        Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
+                        Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG)
+                            .show()
                         binding.nameEditText.setText("")
                         binding.surnameEditText.setText("")
                     }
