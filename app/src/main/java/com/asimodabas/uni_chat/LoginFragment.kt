@@ -51,10 +51,10 @@ class LoginFragment : Fragment() {
             val email = binding.emailText.text.toString().trim()
             val password = binding.passwordText.text.toString().trim()
 
-            if (TextUtils.isEmpty(email)){
+            if (TextUtils.isEmpty(email)) {
                 binding.emailText.error = "Lütfen geçerli bir mail adresi giriniz."
             }
-            if (TextUtils.isEmpty(email)){
+            if (TextUtils.isEmpty(email)) {
                 binding.passwordText.error = "Lütfen geçerli bir şifre giriniz."
             }
 

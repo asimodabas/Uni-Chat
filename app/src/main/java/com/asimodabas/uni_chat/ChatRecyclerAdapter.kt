@@ -67,7 +67,7 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
 
     override fun onBindViewHolder(holder: ChatHolder, position: Int) {
         val textView = holder.itemView.findViewById<TextView>(R.id.chatTextRecycler)
-        textView.text = "${chats.get(position).user} :${chats.get(position).text}"
+        textView.text = "${chats.get(position).user}: ${chats.get(position).text}"
     }
 
     override fun getItemCount(): Int {

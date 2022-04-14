@@ -11,8 +11,8 @@
 
     <corners
         android:bottomRightRadius="50dp"
-        android:topRightRadius="50dp"
-        android:topLeftRadius="50dp" />
+        android:topLeftRadius="50dp"
+        android:topRightRadius="50dp" />
 
     <padding
         android:bottom="10dp"
