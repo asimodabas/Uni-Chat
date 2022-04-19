@@ -8,12 +8,10 @@
         android:centerColor="@color/white"
         android:endColor="@color/white"
         android:startColor="@color/white" />
-
     <corners
         android:bottomRightRadius="50dp"
         android:topLeftRadius="50dp"
         android:topRightRadius="50dp" />
-
     <padding
         android:bottom="10dp"
         android:left="10dp"

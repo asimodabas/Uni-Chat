@@ -8,13 +8,12 @@
         android:centerColor="@color/white"
         android:endColor="@color/white"
         android:startColor="@color/white" />
-
-    <corners android:radius="50dp" />
-
     <padding
         android:bottom="15dp"
         android:left="15dp"
         android:right="15dp"
         android:top="15dp" />
+    <corners
+        android:radius="50dp" />
 
 </shape>
