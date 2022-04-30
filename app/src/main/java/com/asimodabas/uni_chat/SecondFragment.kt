@@ -14,8 +14,6 @@ class SecondFragment : Fragment() {
     private var _binding: FragmentSecondBinding? = null
     private val binding get() = _binding!!
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -33,7 +31,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.button.setOnClickListener {
+        binding.PublicButton.setOnClickListener {
             val action = SecondFragmentDirections.actionSecondFragmentToChatFragment()
             findNavController().navigate(action)
         }
