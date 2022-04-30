@@ -68,7 +68,7 @@ class CreateFragment : Fragment() {
                         binding.nameEditText.setText("")
                         binding.surnameEditText.setText("")
 
-                        val action = CreateFragmentDirections.actionCreateFragmentToChatFragment()
+                        val action = CreateFragmentDirections.actionCreateFragmentToSecondFragment()
                         findNavController().navigate(action)
 
                     }.addOnFailureListener {

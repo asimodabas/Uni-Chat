@@ -14,8 +14,8 @@
             android:id="@+id/action_loginFragment_to_createFragment"
             app:destination="@id/createFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
+            android:id="@+id/action_loginFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
@@ -32,7 +32,16 @@
         android:label="fragment_create"
         tools:layout="@layout/fragment_create" >
         <action
-            android:id="@+id/action_createFragment_to_chatFragment"
+            android:id="@+id/action_createFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.asimodabas.uni_chat.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
     </fragment>
 </navigation>

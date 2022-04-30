@@ -28,7 +28,7 @@ class LoginFragment : Fragment() {
         val currentUser = auth.currentUser
 
         if (currentUser != null) {
-            val action = LoginFragmentDirections.actionLoginFragmentToChatFragment()
+            val action = LoginFragmentDirections.actionLoginFragmentToSecondFragment()
             findNavController().navigate(action)
         }
 
@@ -70,7 +70,7 @@ class LoginFragment : Fragment() {
                     binding.passwordText.text.toString()
                 ).addOnSuccessListener {
 
-                    val action = LoginFragmentDirections.actionLoginFragmentToChatFragment()
+                    val action = LoginFragmentDirections.actionLoginFragmentToSecondFragment()
                     findNavController().navigate(action)
 
                 }.addOnFailureListener {
