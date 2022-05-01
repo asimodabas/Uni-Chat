@@ -5,13 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.asimodabas.uni_chat.databinding.FragmentCreateBinding
+import com.asimodabas.uni_chat.databinding.FragmentChatBinding
+import com.asimodabas.uni_chat.databinding.FragmentEngineerBinding
 import com.asimodabas.uni_chat.databinding.FragmentSecondBinding
 
-class SecondFragment : Fragment() {
+class EngineerFragment : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+    private var _binding: FragmentEngineerBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,7 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FragmentEngineerBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -31,15 +31,7 @@ class SecondFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.PublicButton.setOnClickListener {
-            val action = SecondFragmentDirections.actionSecondFragmentToChatFragment()
-            findNavController().navigate(action)
-        }
 
-        binding.engineerButton.setOnClickListener {
-            val action = SecondFragmentDirections.actionSecondFragmentToEngineerFragment()
-            findNavController().navigate(action)
-        }
 
     }
 
@@ -47,5 +39,4 @@ class SecondFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

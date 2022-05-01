@@ -12,7 +12,7 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="110dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
         android:text="Button"
@@ -23,11 +23,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="110dp"
+        android:id="@+id/engineerButton"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
-        android:text="Button"
+        android:text="Mühendis"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/PublicButton"
         app:layout_constraintHorizontal_bias="0.5"
@@ -36,19 +36,19 @@
 
     <Button
         android:id="@+id/PublicButton"
-        android:layout_width="110dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
         android:text="Genel"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintStart_toEndOf="@+id/engineerButton"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="110dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
         android:text="Button"
@@ -56,11 +56,11 @@
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/engineerButton" />
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="110dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
         android:text="Button"
@@ -72,7 +72,7 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="110dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
         android:text="Button"
@@ -84,7 +84,7 @@
 
     <Button
         android:id="@+id/button10"
-        android:layout_width="110dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
         android:text="Button"
@@ -96,7 +96,7 @@
 
     <Button
         android:id="@+id/button11"
-        android:layout_width="110dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
         android:text="Button"
@@ -108,7 +108,7 @@
 
     <Button
         android:id="@+id/button12"
-        android:layout_width="110dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
         android:text="Button"

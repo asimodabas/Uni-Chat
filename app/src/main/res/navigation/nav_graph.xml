@@ -43,5 +43,13 @@
         <action
             android:id="@+id/action_secondFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_engineerFragment"
+            app:destination="@id/engineerFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/engineerFragment"
+        android:name="com.asimodabas.uni_chat.EngineerFragment"
+        android:label="fragment_engineer"
+        tools:layout="@layout/fragment_engineer" />
 </navigation>
