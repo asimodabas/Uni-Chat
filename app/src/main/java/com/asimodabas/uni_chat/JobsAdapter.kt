@@ -8,13 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class JobsAdapter(val mContext : Context,val jobLists:List<Jobs>) : RecyclerView.Adapter<JobsAdapter.CardConservative>() {
+class JobsAdapter(val mContext: Context, val jobLists: List<Jobs>) :
+    RecyclerView.Adapter<JobsAdapter.CardConservative>() {
 
-    inner class CardConservative (view:View):RecyclerView.ViewHolder(view){
+    inner class CardConservative(view: View) : RecyclerView.ViewHolder(view) {
 
-        var engineerImageView : ImageView
+        var engineerImageView: ImageView
 
-        var engineerTextView : TextView
+        var engineerTextView: TextView
 
         init {
             engineerImageView = view.findViewById(R.id.engineerImageView)
@@ -24,7 +25,7 @@ class JobsAdapter(val mContext : Context,val jobLists:List<Jobs>) : RecyclerView
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardConservative {
-        val design = LayoutInflater.from(mContext).inflate(R.layout.card_design,parent,false)
+        val design = LayoutInflater.from(mContext).inflate(R.layout.card_design, parent, false)
         return CardConservative(design)
     }
 
@@ -32,7 +33,13 @@ class JobsAdapter(val mContext : Context,val jobLists:List<Jobs>) : RecyclerView
         val job = jobLists[position]
 
         holder.engineerTextView.text = job.jobName
-        holder.engineerImageView.setImageResource(mContext.resources.getIdentifier(job.imageName,"drawable",mContext.packageName))
+        holder.engineerImageView.setImageResource(
+            mContext.resources.getIdentifier(
+                job.imageName,
+                "drawable",
+                mContext.packageName
+            )
+        )
 
     }
 

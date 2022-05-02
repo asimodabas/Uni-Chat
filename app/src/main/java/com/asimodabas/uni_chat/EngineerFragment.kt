@@ -36,16 +36,22 @@ class EngineerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.engineerRecyclerView.setHasFixedSize(true)
-        binding.engineerRecyclerView.layoutManager= LinearLayoutManager(requireContext())
+        binding.engineerRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        val j1 = Jobs(1,"Bilgisayar Mühendisi","computer")
-        val j2 = Jobs(2,"Elektrik Mühendisi","electrical")
+        val j1 = Jobs(1, "Bilgisayar Mühendisi", "computer")
+        val j2 = Jobs(2, "E-E Mühendisi", "electrical")
+        val j3 = Jobs(3, "Gıda Mühendisi", "food")
+        val j4 = Jobs(4, "Makine Mühendisi", "machine")
+        val j5 = Jobs(5, "İnşaat Mühendisi", "build")
 
         jobArrayList = ArrayList<Jobs>()
         jobArrayList.add(j1)
         jobArrayList.add(j2)
+        jobArrayList.add(j3)
+        jobArrayList.add(j4)
+        jobArrayList.add(j5)
 
-        adapter = JobsAdapter(requireContext(),jobArrayList)
+        adapter = JobsAdapter(requireContext(), jobArrayList)
 
         binding.engineerRecyclerView.adapter = adapter
 
