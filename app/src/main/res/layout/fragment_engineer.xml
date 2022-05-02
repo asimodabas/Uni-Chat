@@ -1,20 +1,378 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingStart="5dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="5dp"
+    android:paddingBottom="10dp"
     tools:context=".EngineerFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/engineerRecyclerView"
-        android:layout_width="409dp"
-        android:layout_height="601dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/chemicalCardView"
+        android:layout_width="match_parent"
+
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="@color/yellow">
+
+            <ImageView
+                android:id="@+id/chemicalImageView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/chemical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/chemicalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Kimya Mühendisliği"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chemicalImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/chemicalMediaButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="medya"
+                app:layout_constraintBottom_toTopOf="@+id/chemicalMessageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/chemicalImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/chemicalMessageButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="mesaj"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/chemicalImageView"
+                app:layout_constraintTop_toBottomOf="@+id/chemicalMediaButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+
+        android:id="@+id/computerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="@color/yellow"
+            app:layout_constraintBottom_toBottomOf="@+id/computerMessageButton"
+            app:layout_constraintTop_toBottomOf="@+id/computerMessageButton">
+
+            <TextView
+                android:id="@+id/computerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Bilgisayar Mühendisliği"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/computerImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/computerMessageButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="Mesaj"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/computerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/computerMediaButton" />
+
+            <Button
+                android:id="@+id/computerMediaButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="Medya"
+                app:layout_constraintBottom_toTopOf="@+id/computerMessageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/computerImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/computerImageView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/computer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/electricCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/yellow">
+
+            <ImageView
+                android:id="@+id/electricImageView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/electric"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/electrictextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="E-E Mühendisliği"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/electricImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/electricMediaButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="Medya"
+                app:layout_constraintBottom_toTopOf="@+id/electricMessageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/electricImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/electricMessageButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="mesaj"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/electricImageView"
+                app:layout_constraintTop_toBottomOf="@+id/electricMediaButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/buildCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="@color/yellow">
+
+            <ImageView
+                android:id="@+id/buildImageView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/build"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/buildTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="İnşaat Mühendisliği"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/buildImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buildMediaButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="medya"
+                app:layout_constraintBottom_toTopOf="@+id/buildMessageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/buildImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buildMessageButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="mesaj"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/buildImageView"
+                app:layout_constraintTop_toBottomOf="@+id/buildMediaButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/foodCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="@color/yellow">
+
+            <ImageView
+                android:id="@+id/foodImageView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/food"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/foodTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Gıda Mühendisliği"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/foodImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/foodMediaButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="medya"
+                app:layout_constraintBottom_toTopOf="@+id/foodMessageButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/foodImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/foodMessageButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="mesaj"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/foodImageView"
+                app:layout_constraintTop_toBottomOf="@+id/foodMediaButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/machineCardView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="@color/yellow">
+
+            <ImageView
+                android:id="@+id/machineImageView"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/machine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/machineTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Makine Mühenisliği"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/machineImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/machineMediaButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="mesaj"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/machineImageView"
+                app:layout_constraintTop_toBottomOf="@+id/machineMessageButton" />
+
+            <Button
+                android:id="@+id/machineMessageButton"
+                android:layout_width="85dp"
+                android:layout_height="37dp"
+                android:backgroundTint="#4E3C3C"
+                android:text="medya"
+                app:layout_constraintBottom_toTopOf="@+id/machineMediaButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/machineImageView"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

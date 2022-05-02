@@ -5,17 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.asimodabas.uni_chat.databinding.FragmentChatBinding
+import com.asimodabas.uni_chat.databinding.FragmentComputerMessageBinding
 import com.asimodabas.uni_chat.databinding.FragmentEngineerBinding
-import com.asimodabas.uni_chat.databinding.FragmentSecondBinding
 
-class EngineerFragment : Fragment() {
+class ComputerMessageFragment : Fragment() {
 
-    private var _binding: FragmentEngineerBinding? = null
+    private var _binding: FragmentComputerMessageBinding? = null
     private val binding get() = _binding!!
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,7 +22,7 @@ class EngineerFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentEngineerBinding.inflate(inflater, container, false)
+        _binding = FragmentComputerMessageBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
