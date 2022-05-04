@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.asimodabas.uni_chat.databinding.RecyclerRowMediaBinding
+import com.squareup.picasso.Picasso
 
 class MediaRecyclerAdapter(private val mediaList:ArrayList<UniMedia>):RecyclerView.Adapter<MediaRecyclerAdapter.MediaHolder>() {
 
@@ -21,7 +22,7 @@ class MediaRecyclerAdapter(private val mediaList:ArrayList<UniMedia>):RecyclerVi
 
     override fun onBindViewHolder(holder: MediaHolder, position: Int) {
         holder.binding.mediaEmailEditText.text = mediaList.get(position).email
-
+        Picasso.get().load(mediaList.get(position).downloadUrl).into(holder.binding.mediaImageView)
     }
 
     override fun getItemCount(): Int {

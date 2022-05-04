@@ -14,6 +14,7 @@ import com.asimodabas.uni_chat.databinding.FragmentMediaChatBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
@@ -67,13 +68,16 @@ class MediaChatFragment : Fragment() {
 
     fun getData(){
 
-        firestore.collection("Computer-Media").addSnapshotListener { value, error ->
+        firestore.collection("Computer-Media").orderBy("date",Query.Direction.DESCENDING).addSnapshotListener { value, error ->
             if (error!=null){
                 Toast.makeText(requireContext(),"Hata",Toast.LENGTH_LONG).show()
             }else{
                 if (value!=null){
                     if (!value.isEmpty){
                         val documents = value.documents
+
+                        mediaArrayList.clear()
+
                         for (document in documents){
 
                             val useremail = document.get("userEmail") as String

@@ -23,6 +23,7 @@ import androidx.navigation.fragment.findNavController
 import com.asimodabas.uni_chat.databinding.FragmentChatBinding
 import com.asimodabas.uni_chat.databinding.FragmentUpdateMediaBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -114,6 +115,7 @@ class UpdateMediaFragment : Fragment() {
                         val mediaMap = hashMapOf<String, Any>()
 
                         mediaMap.put("downloadUrl", downloadUrl)
+                        mediaMap.put("date",Timestamp.now())
                         mediaMap.put("userEmail", auth.currentUser!!.email!!)
 
                         firestore.collection("Computer-Media").add(mediaMap).addOnSuccessListener {
