@@ -10,6 +10,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mediaChatRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#C5C3BF" />
