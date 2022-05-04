@@ -19,10 +19,19 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 import com.asimodabas.uni_chat.databinding.FragmentChatBinding
 import com.asimodabas.uni_chat.databinding.FragmentUpdateMediaBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import java.lang.Exception
+import java.util.*
 import java.util.jar.Manifest
 
 class UpdateMediaFragment : Fragment() {
@@ -31,10 +40,16 @@ class UpdateMediaFragment : Fragment() {
     private val binding get() = _binding!!
     var selectedImage : Uri? = null
     var selectedBitmap : Bitmap? = null
+    private lateinit var auth: FirebaseAuth
+    private lateinit var firestore: FirebaseFirestore
+    private lateinit var storage : FirebaseStorage
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        auth = Firebase.auth
+        firestore = Firebase.firestore
+        storage = Firebase.storage
 
     }
 
@@ -52,7 +67,13 @@ class UpdateMediaFragment : Fragment() {
 
         binding.uploadImageView.setOnClickListener {
             selected_image(it)
+
         }
+
+        binding.UploadButton.setOnClickListener {
+            upload(it)
+        }
+
     }
 
     fun selected_image(view: View){
@@ -64,6 +85,49 @@ class UpdateMediaFragment : Fragment() {
                 startActivityForResult(Intent,2)
             }
         }
+    }
+    fun upload(view: View){
+
+        //random uuid
+        val uuid = UUID.randomUUID()
+        val imageName = "$uuid.jpg"
+
+        val reference = storage.reference
+        val imageReference = reference.child("images").child(imageName)
+
+        if (selectedImage !=null){
+            imageReference.putFile(selectedImage!!).addOnSuccessListener {
+                //download url
+
+                val uploadPictureReferance = storage.reference.child("images").child(imageName)
+                uploadPictureReferance.downloadUrl.addOnSuccessListener {
+                val downloadUrl = it.toString()
+
+                    if (auth.currentUser != null){
+
+                    val mediaMap = hashMapOf<String,Any>()
+
+                    mediaMap.put("downloadUrl",downloadUrl)
+                    mediaMap.put("userEmail",auth.currentUser!!.email!!)
+
+                        firestore.collection("Computer-Media").add(mediaMap).addOnSuccessListener {
+
+                            Toast.makeText(requireContext(),"Paylaşım Başarılı",Toast.LENGTH_LONG).show()
+
+                        }.addOnFailureListener {
+                            Toast.makeText(requireContext(),"Hata",Toast.LENGTH_LONG).show()
+                        }
+                    }
+
+                }
+
+            }.addOnFailureListener{
+                Toast.makeText(requireContext(),it.localizedMessage,Toast.LENGTH_LONG).show()
+            }
+        }
+
+        val action = UpdateMediaFragmentDirections.actionUpdateMediaFragmentToMediaChatFragment()
+        findNavController().navigate(action)
     }
 
     override fun onRequestPermissionsResult(
@@ -78,6 +142,7 @@ class UpdateMediaFragment : Fragment() {
             }
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -92,6 +157,7 @@ class UpdateMediaFragment : Fragment() {
                         val source = ImageDecoder.createSource(it.contentResolver,selectedImage!!)
                         selectedBitmap = ImageDecoder.decodeBitmap(source)
                         binding.uploadImageView.setImageBitmap(selectedBitmap)
+
                     }else{
                         selectedBitmap = MediaStore.Images.Media.getBitmap(it.contentResolver,selectedImage)
                         binding.uploadImageView.setImageBitmap(selectedBitmap)
@@ -104,6 +170,8 @@ class UpdateMediaFragment : Fragment() {
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
