@@ -51,5 +51,30 @@
         android:id="@+id/engineerFragment"
         android:name="com.asimodabas.uni_chat.EngineerFragment"
         android:label="fragment_engineer"
-        tools:layout="@layout/fragment_engineer" />
+        tools:layout="@layout/fragment_engineer" >
+        <action
+            android:id="@+id/action_engineerFragment_to_mediaChatFragment"
+            app:destination="@id/mediaChatFragment" />
+        <action
+            android:id="@+id/action_engineerFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mediaChatFragment"
+        android:name="com.asimodabas.uni_chat.MediaChatFragment"
+        android:label="fragment_media_chat"
+        tools:layout="@layout/fragment_media_chat" >
+        <action
+            android:id="@+id/action_mediaChatFragment_to_updateMediaFragment"
+            app:destination="@id/updateMediaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateMediaFragment"
+        android:name="com.asimodabas.uni_chat.UpdateMediaFragment"
+        android:label="fragment_update_media"
+        tools:layout="@layout/fragment_update_media" >
+        <action
+            android:id="@+id/action_updateMediaFragment_to_mediaChatFragment"
+            app:destination="@id/mediaChatFragment" />
+    </fragment>
 </navigation>

@@ -35,6 +35,15 @@ class EngineerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.computerMediaButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment()
+            findNavController().navigate(action)
+        }
+
+        binding.computerMessageButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment()
+            findNavController().navigate(action)
+        }
 
 
     }

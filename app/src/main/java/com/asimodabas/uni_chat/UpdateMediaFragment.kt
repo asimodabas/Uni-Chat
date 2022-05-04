@@ -5,13 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.asimodabas.uni_chat.databinding.FragmentEngineerBinding
-import com.asimodabas.uni_chat.databinding.FragmentMediaChatBinding
+import com.asimodabas.uni_chat.databinding.FragmentChatBinding
+import com.asimodabas.uni_chat.databinding.FragmentUpdateMediaBinding
 
-class MediaChatFragment : Fragment() {
+class UpdateMediaFragment : Fragment() {
 
-    private var _binding: FragmentMediaChatBinding? = null
+    private var _binding: FragmentUpdateMediaBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +22,7 @@ class MediaChatFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMediaChatBinding.inflate(inflater, container, false)
+        _binding = FragmentUpdateMediaBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -31,16 +30,12 @@ class MediaChatFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.floatingActionButton.setOnClickListener {
-            val action = MediaChatFragmentDirections.actionMediaChatFragmentToUpdateMediaFragment()
-            findNavController().navigate(action)
-        }
 
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }
