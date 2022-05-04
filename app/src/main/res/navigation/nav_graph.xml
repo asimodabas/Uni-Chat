@@ -51,14 +51,5 @@
         android:id="@+id/engineerFragment"
         android:name="com.asimodabas.uni_chat.EngineerFragment"
         android:label="fragment_engineer"
-        tools:layout="@layout/fragment_engineer" >
-        <action
-            android:id="@+id/action_engineerFragment_to_computerMessageFragment"
-            app:destination="@id/computerMessageFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/computerMessageFragment"
-        android:name="com.asimodabas.uni_chat.ComputerMessageFragment"
-        android:label="fragment_computer_message"
-        tools:layout="@layout/fragment_computer_message" />
+        tools:layout="@layout/fragment_engineer" />
 </navigation>

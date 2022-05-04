@@ -5,12 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.asimodabas.uni_chat.databinding.FragmentComputerMessageBinding
 import com.asimodabas.uni_chat.databinding.FragmentEngineerBinding
+import com.asimodabas.uni_chat.databinding.FragmentMediaChatBinding
 
-class ComputerMessageFragment : Fragment() {
+class MediaChatFragment : Fragment() {
 
-    private var _binding: FragmentComputerMessageBinding? = null
+    private var _binding: FragmentMediaChatBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +22,7 @@ class ComputerMessageFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentComputerMessageBinding.inflate(inflater, container, false)
+        _binding = FragmentMediaChatBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -31,10 +31,12 @@ class ComputerMessageFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }
