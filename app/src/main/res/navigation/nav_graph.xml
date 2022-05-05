@@ -65,16 +65,16 @@
         android:label="fragment_media_chat"
         tools:layout="@layout/fragment_media_chat" >
         <action
-            android:id="@+id/action_mediaChatFragment_to_updateMediaFragment"
-            app:destination="@id/updateMediaFragment" />
+            android:id="@+id/action_mediaChatFragment_to_uploadMediaFragment"
+            app:destination="@id/uploadMediaFragment" />
     </fragment>
     <fragment
-        android:id="@+id/updateMediaFragment"
-        android:name="com.asimodabas.uni_chat.UpdateMediaFragment"
-        android:label="fragment_update_media"
-        tools:layout="@layout/fragment_update_media" >
+        android:id="@+id/uploadMediaFragment"
+        android:name="com.asimodabas.uni_chat.UploadMediaFragment"
+        android:label="fragment_upload_media"
+        tools:layout="@layout/fragment_upload_media" >
         <action
-            android:id="@+id/action_updateMediaFragment_to_mediaChatFragment"
+            android:id="@+id/action_uploadMediaFragment_to_mediaChatFragment"
             app:destination="@id/mediaChatFragment" />
     </fragment>
 </navigation>

@@ -60,7 +60,7 @@ class MediaChatFragment : Fragment() {
         binding.mediaChatRecyclerView.adapter = mediaAdapter
 
         binding.floatingActionButton.setOnClickListener {
-            val action = MediaChatFragmentDirections.actionMediaChatFragmentToUpdateMediaFragment()
+            val action = MediaChatFragmentDirections.actionMediaChatFragmentToUploadMediaFragment()
             findNavController().navigate(action)
         }
 

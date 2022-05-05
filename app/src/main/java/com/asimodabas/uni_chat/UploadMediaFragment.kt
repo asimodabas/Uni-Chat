@@ -1,7 +1,6 @@
 package com.asimodabas.uni_chat
 
 import android.app.Activity
-import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -10,19 +9,14 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.asimodabas.uni_chat.databinding.FragmentChatBinding
-import com.asimodabas.uni_chat.databinding.FragmentUpdateMediaBinding
-import com.google.android.material.snackbar.Snackbar
+import com.asimodabas.uni_chat.databinding.FragmentUploadMediaBinding
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -31,13 +25,11 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
-import java.lang.Exception
 import java.util.*
-import java.util.jar.Manifest
 
-class UpdateMediaFragment : Fragment() {
+class UploadMediaFragment : Fragment() {
 
-    private var _binding: FragmentUpdateMediaBinding? = null
+    private var _binding: FragmentUploadMediaBinding? = null
     private val binding get() = _binding!!
     var selectedImage: Uri? = null
     var selectedBitmap: Bitmap? = null
@@ -58,7 +50,7 @@ class UpdateMediaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentUpdateMediaBinding.inflate(inflater, container, false)
+        _binding = FragmentUploadMediaBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -134,7 +126,7 @@ class UpdateMediaFragment : Fragment() {
             }
         }
 
-        val action = UpdateMediaFragmentDirections.actionUpdateMediaFragmentToMediaChatFragment()
+        val action = UploadMediaFragmentDirections.actionUploadMediaFragmentToMediaChatFragment()
         findNavController().navigate(action)
     }
 
