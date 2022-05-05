@@ -115,7 +115,7 @@ class UpdateMediaFragment : Fragment() {
                         val mediaMap = hashMapOf<String, Any>()
 
                         mediaMap.put("downloadUrl", downloadUrl)
-                        mediaMap.put("date",Timestamp.now())
+                        mediaMap.put("date", Timestamp.now())
                         mediaMap.put("userEmail", auth.currentUser!!.email!!)
 
                         firestore.collection("Computer-Media").add(mediaMap).addOnSuccessListener {

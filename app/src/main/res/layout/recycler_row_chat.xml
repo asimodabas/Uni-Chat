@@ -9,7 +9,7 @@
         android:id="@+id/chatTextRecycler"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_margin="5dp"
         android:background="@drawable/message_background"
         android:text="Message"
         android:textColor="@color/black"

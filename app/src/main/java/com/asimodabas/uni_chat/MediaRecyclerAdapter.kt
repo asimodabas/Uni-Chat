@@ -6,16 +6,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.asimodabas.uni_chat.databinding.RecyclerRowMediaBinding
 import com.squareup.picasso.Picasso
 
-class MediaRecyclerAdapter(private val mediaList:ArrayList<UniMedia>):RecyclerView.Adapter<MediaRecyclerAdapter.MediaHolder>() {
+class MediaRecyclerAdapter(private val mediaList: ArrayList<UniMedia>) :
+    RecyclerView.Adapter<MediaRecyclerAdapter.MediaHolder>() {
 
-    class MediaHolder(val binding: RecyclerRowMediaBinding):RecyclerView.ViewHolder(binding.root){
-
+    class MediaHolder(val binding: RecyclerRowMediaBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MediaHolder {
 
-        val binding = RecyclerRowMediaBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        val binding =
+            RecyclerRowMediaBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return MediaHolder(binding)
 
     }
