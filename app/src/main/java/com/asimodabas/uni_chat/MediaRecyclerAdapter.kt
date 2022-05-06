@@ -12,16 +12,16 @@ import com.asimodabas.uni_chat.databinding.RecyclerRowMediaBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
 
-class MediaRecyclerAdapter: RecyclerView.Adapter<MediaRecyclerAdapter.MediaHolder>(){
+class MediaRecyclerAdapter : RecyclerView.Adapter<MediaRecyclerAdapter.MediaHolder>() {
 
     private val VİEW_TYPE_MESSAGE_SEND = 1
     private val VİEW_TYPE_MESSAGE_RECEIVED = 2
 
-    class MediaHolder(itemView:View):RecyclerView.ViewHolder(itemView){
+    class MediaHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
 
-    private val diffUtil = object :DiffUtil.ItemCallback<UniMedia>(){
+    private val diffUtil = object : DiffUtil.ItemCallback<UniMedia>() {
         override fun areItemsTheSame(oldItem: UniMedia, newItem: UniMedia): Boolean {
 
             return oldItem == newItem
@@ -35,23 +35,24 @@ class MediaRecyclerAdapter: RecyclerView.Adapter<MediaRecyclerAdapter.MediaHolde
         }
     }
 
-    private val recyclerListDiffer = AsyncListDiffer(this,diffUtil)
+    private val recyclerListDiffer = AsyncListDiffer(this, diffUtil)
 
 
-    var medias : List<UniMedia>
+    var medias: List<UniMedia>
         get() = recyclerListDiffer.currentList
         set(value) = recyclerListDiffer.submitList(value)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MediaHolder {
 
-        if (viewType == VİEW_TYPE_MESSAGE_RECEIVED){
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_row_media,parent,false)
+        if (viewType == VİEW_TYPE_MESSAGE_RECEIVED) {
+            val view = LayoutInflater.from(parent.context)
+                .inflate(R.layout.recycler_row_media, parent, false)
             return MediaHolder(view)
-        }else{
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_row_media_right,parent,false)
+        } else {
+            val view = LayoutInflater.from(parent.context)
+                .inflate(R.layout.recycler_row_media_right, parent, false)
             return MediaHolder(view)
         }
-
 
 
     }
@@ -69,11 +70,11 @@ class MediaRecyclerAdapter: RecyclerView.Adapter<MediaRecyclerAdapter.MediaHolde
     override fun getItemViewType(position: Int): Int {
         val media = medias.get(position)
 
-        if (media.email == FirebaseAuth.getInstance().currentUser?.email.toString()){
+        if (media.email == FirebaseAuth.getInstance().currentUser?.email.toString()) {
 
             return VİEW_TYPE_MESSAGE_SEND
 
-        }else{
+        } else {
 
             return VİEW_TYPE_MESSAGE_RECEIVED
         }

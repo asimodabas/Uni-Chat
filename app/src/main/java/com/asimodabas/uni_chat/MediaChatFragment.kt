@@ -26,8 +26,8 @@ class MediaChatFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
     private lateinit var storage: FirebaseStorage
-    private lateinit var mediaArrayList : ArrayList<UniMedia>
-    private lateinit var mediaAdapter : MediaRecyclerAdapter
+    private lateinit var mediaArrayList: ArrayList<UniMedia>
+    private lateinit var mediaAdapter: MediaRecyclerAdapter
     private val args: MediaChatFragmentArgs by navArgs()
 
 
@@ -57,7 +57,7 @@ class MediaChatFragment : Fragment() {
         mediaAdapter = MediaRecyclerAdapter()
         binding.mediaChatRecyclerView.adapter = mediaAdapter
 
-        when(args.departmentId) {
+        when (args.departmentId) {
 
             1 -> {
                 getData("Computer-Media")
@@ -83,42 +83,44 @@ class MediaChatFragment : Fragment() {
         }
 
         binding.floatingActionButton.setOnClickListener {
-            val action = MediaChatFragmentDirections.actionMediaChatFragmentToUploadMediaFragment(args.departmentId)
+            val action =
+                MediaChatFragmentDirections.actionMediaChatFragmentToUploadMediaFragment(args.departmentId)
             findNavController().navigate(action)
         }
 
     }
 
-    private fun getData(collectionPath: String){
+    private fun getData(collectionPath: String) {
 
-        firestore.collection(collectionPath).orderBy("date",Query.Direction.DESCENDING).addSnapshotListener { value, error ->
-            if (error!=null){
-                Toast.makeText(requireContext(),"Hata",Toast.LENGTH_LONG).show()
-            }else{
-                if (value!=null){
-                    if (!value.isEmpty){
-                        val documents = value.documents
+        firestore.collection(collectionPath).orderBy("date", Query.Direction.DESCENDING)
+            .addSnapshotListener { value, error ->
+                if (error != null) {
+                    Toast.makeText(requireContext(), "Hata", Toast.LENGTH_LONG).show()
+                } else {
+                    if (value != null) {
+                        if (!value.isEmpty) {
+                            val documents = value.documents
 
-                        mediaArrayList.clear()
+                            mediaArrayList.clear()
 
-                        for (document in documents){
+                            for (document in documents) {
 
 
-                            val useremail = document.get("userEmail") as String
-                            val downloadUrl = document.get("downloadUrl") as String
+                                val useremail = document.get("userEmail") as String
+                                val downloadUrl = document.get("downloadUrl") as String
 
-                            println(downloadUrl)
+                                println(downloadUrl)
 
-                            val uniMedia = UniMedia(useremail,downloadUrl)
-                            mediaArrayList.add(uniMedia)
+                                val uniMedia = UniMedia(useremail, downloadUrl)
+                                mediaArrayList.add(uniMedia)
+                            }
+
+                            mediaAdapter.medias = mediaArrayList
+                            mediaAdapter.notifyDataSetChanged()
                         }
-
-                        mediaAdapter.medias = mediaArrayList
-                        mediaAdapter.notifyDataSetChanged()
                     }
                 }
             }
-        }
     }
 
     override fun onDestroyView() {
