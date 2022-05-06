@@ -62,6 +62,24 @@ class ChatFragment : Fragment() {
             1 -> {
                 getChatMessages("Computer-Chat")
             }
+            2 -> {
+                getChatMessages("Chemical-Chat")
+            }
+            3 -> {
+                getChatMessages("Industry-Chat")
+            }
+            4 -> {
+                getChatMessages("Build-Chat")
+            }
+            5 -> {
+                getChatMessages("Food-Chat")
+            }
+            6 -> {
+                getChatMessages("Electric-Chat")
+            }
+            7 -> {
+                getChatMessages("Machine-Chat")
+            }
 
         }
 
@@ -85,13 +103,28 @@ class ChatFragment : Fragment() {
                     1 -> {
                         sendMessage("Computer-Chat", dataMap)
                     }
+                    2 -> {
+                        sendMessage("Chemical-Chat", dataMap)
+                    }
+                    3 -> {
+                        sendMessage("Industry-Chat", dataMap)
+                    }
+                    4 -> {
+                        sendMessage("Build-Chat", dataMap)
+                    }
+                    5 -> {
+                        sendMessage("Food-Chat", dataMap)
+                    }
+                    6 -> {
+                        sendMessage("Electric-Chat", dataMap)
+                    }
+                    7 -> {
+                        sendMessage("Machine-Chat", dataMap)
+                    }
                 }
 
             }
         }
-
-
-
 
     }
 

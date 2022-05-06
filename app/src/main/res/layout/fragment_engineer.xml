@@ -422,7 +422,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
-                        android:id="@+id/machineMediaButton"
+                        android:id="@+id/machineMessageButton"
                         android:layout_width="85dp"
                         android:layout_height="37dp"
                         android:backgroundTint="#4E3C3C"
@@ -431,15 +431,15 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/machineImageView"
-                        app:layout_constraintTop_toBottomOf="@+id/machineMessageButton" />
+                        app:layout_constraintTop_toBottomOf="@+id/machineMediaButton" />
 
                     <Button
-                        android:id="@+id/machineMessageButton"
+                        android:id="@+id/machineMediaButton"
                         android:layout_width="85dp"
                         android:layout_height="37dp"
                         android:backgroundTint="#4E3C3C"
                         android:text="medya"
-                        app:layout_constraintBottom_toTopOf="@+id/machineMediaButton"
+                        app:layout_constraintBottom_toTopOf="@+id/machineMessageButton"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/machineImageView"

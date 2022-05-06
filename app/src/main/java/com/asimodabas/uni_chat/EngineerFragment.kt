@@ -35,6 +35,7 @@ class EngineerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+//Computer
         binding.computerMediaButton.setOnClickListener {
             val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(1)
             findNavController().navigate(action)
@@ -44,17 +45,66 @@ class EngineerFragment : Fragment() {
             val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(1)
             findNavController().navigate(action)
         }
-
-        binding.chemicalMessageButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(2)
-            findNavController().navigate(action)
-        }
-
+//Chemical
         binding.chemicalMediaButton.setOnClickListener {
             val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(2)
             findNavController().navigate(action)
         }
 
+        binding.chemicalMessageButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(2)
+            findNavController().navigate(action)
+        }
+//Industry
+        binding.industryMediaButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(3)
+            findNavController().navigate(action)
+        }
+
+        binding.industryMessageButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(3)
+            findNavController().navigate(action)
+        }
+//Build
+        binding.buildMediaButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(4)
+            findNavController().navigate(action)
+        }
+
+        binding.buildMessageButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(4)
+            findNavController().navigate(action)
+        }
+//Food
+        binding.foodMediaButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(5)
+            findNavController().navigate(action)
+        }
+
+        binding.foodMessageButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(5)
+            findNavController().navigate(action)
+        }
+//Electric
+        binding.electricMediaButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(6)
+            findNavController().navigate(action)
+        }
+
+        binding.electricMessageButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(6)
+            findNavController().navigate(action)
+        }
+//Machine
+        binding.machineMediaButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(7)
+            findNavController().navigate(action)
+        }
+
+        binding.machineMessageButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(7)
+            findNavController().navigate(action)
+        }
     }
 
     override fun onDestroyView() {

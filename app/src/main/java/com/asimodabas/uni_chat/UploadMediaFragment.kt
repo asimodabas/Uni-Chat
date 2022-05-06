@@ -75,6 +75,27 @@ class UploadMediaFragment : Fragment() {
                     upload("Chemical-Media")
 
                 }
+                3 -> {
+                    upload("Industry-Media")
+
+                }
+                4 -> {
+                    upload("Build-Media")
+
+                }
+                5 -> {
+                    upload("Food-Media")
+
+                }
+                6 -> {
+                    upload("Electric-Media")
+
+                }
+                7 -> {
+                    upload("Machine-Media")
+
+                }
+
             }
         }
 

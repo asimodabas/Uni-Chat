@@ -1,16 +1,14 @@
 package com.asimodabas.uni_chat
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.asimodabas.uni_chat.databinding.FragmentEngineerBinding
 import com.asimodabas.uni_chat.databinding.FragmentMediaChatBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -56,15 +54,31 @@ class MediaChatFragment : Fragment() {
         mediaArrayList = ArrayList<UniMedia>()
 
         binding.mediaChatRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        mediaAdapter = MediaRecyclerAdapter(mediaArrayList)
+        mediaAdapter = MediaRecyclerAdapter()
         binding.mediaChatRecyclerView.adapter = mediaAdapter
 
         when(args.departmentId) {
+
             1 -> {
                 getData("Computer-Media")
             }
             2 -> {
                 getData("Chemical-Media")
+            }
+            3 -> {
+                getData("Industry-Media")
+            }
+            4 -> {
+                getData("Build-Media")
+            }
+            5 -> {
+                getData("Food-Media")
+            }
+            6 -> {
+                getData("Electric-Media")
+            }
+            7 -> {
+                getData("Machine-Media")
             }
         }
 
@@ -89,6 +103,7 @@ class MediaChatFragment : Fragment() {
 
                         for (document in documents){
 
+
                             val useremail = document.get("userEmail") as String
                             val downloadUrl = document.get("downloadUrl") as String
 
@@ -98,6 +113,7 @@ class MediaChatFragment : Fragment() {
                             mediaArrayList.add(uniMedia)
                         }
 
+                        mediaAdapter.medias = mediaArrayList
                         mediaAdapter.notifyDataSetChanged()
                     }
                 }
