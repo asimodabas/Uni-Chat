@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.asimodabas.uni_chat.databinding.FragmentUploadMediaBinding
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
@@ -36,6 +37,7 @@ class UploadMediaFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
     private lateinit var storage: FirebaseStorage
+    private val args: UploadMediaFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +66,16 @@ class UploadMediaFragment : Fragment() {
         }
 
         binding.UploadButton.setOnClickListener {
-            upload(it)
+            when(args.departmantId) {
+                1 -> {
+                    upload("Computer-Media")
+
+                }
+                2 -> {
+                    upload("Chemical-Media")
+
+                }
+            }
         }
 
     }
@@ -85,7 +96,7 @@ class UploadMediaFragment : Fragment() {
         }
     }
 
-    fun upload(view: View) {
+    private fun upload(path: String) {
 
         //random uuid
         val uuid = UUID.randomUUID()
@@ -110,10 +121,12 @@ class UploadMediaFragment : Fragment() {
                         mediaMap.put("date", Timestamp.now())
                         mediaMap.put("userEmail", auth.currentUser!!.email!!)
 
-                        firestore.collection("Computer-Media").add(mediaMap).addOnSuccessListener {
+                        firestore.collection(path).add(mediaMap).addOnSuccessListener {
 
                             Toast.makeText(requireContext(), "Paylaşım Başarılı", Toast.LENGTH_LONG)
                                 .show()
+
+                            findNavController().navigateUp()
 
                         }.addOnFailureListener {
                             Toast.makeText(requireContext(), "Hata", Toast.LENGTH_LONG).show()
@@ -125,9 +138,6 @@ class UploadMediaFragment : Fragment() {
                 Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
             }
         }
-
-        val action = UploadMediaFragmentDirections.actionUploadMediaFragmentToMediaChatFragment()
-        findNavController().navigate(action)
     }
 
     override fun onRequestPermissionsResult(

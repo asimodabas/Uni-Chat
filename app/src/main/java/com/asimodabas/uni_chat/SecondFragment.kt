@@ -32,7 +32,7 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.PublicButton.setOnClickListener {
-            val action = SecondFragmentDirections.actionSecondFragmentToChatFragment()
+            val action = SecondFragmentDirections.actionSecondFragmentToChatFragment(0)
             findNavController().navigate(action)
         }
 

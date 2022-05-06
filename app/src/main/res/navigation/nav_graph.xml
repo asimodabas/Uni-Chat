@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_chatFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <argument
+            android:name="chatType"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/createFragment"
@@ -53,11 +56,11 @@
         android:label="fragment_engineer"
         tools:layout="@layout/fragment_engineer" >
         <action
-            android:id="@+id/action_engineerFragment_to_mediaChatFragment"
-            app:destination="@id/mediaChatFragment" />
-        <action
             android:id="@+id/action_engineerFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_engineerFragment_to_mediaChatFragment"
+            app:destination="@id/mediaChatFragment" />
     </fragment>
     <fragment
         android:id="@+id/mediaChatFragment"
@@ -67,6 +70,9 @@
         <action
             android:id="@+id/action_mediaChatFragment_to_uploadMediaFragment"
             app:destination="@id/uploadMediaFragment" />
+        <argument
+            android:name="departmentId"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/uploadMediaFragment"
@@ -76,5 +82,8 @@
         <action
             android:id="@+id/action_uploadMediaFragment_to_mediaChatFragment"
             app:destination="@id/mediaChatFragment" />
+        <argument
+            android:name="departmantId"
+            app:argType="integer" />
     </fragment>
 </navigation>

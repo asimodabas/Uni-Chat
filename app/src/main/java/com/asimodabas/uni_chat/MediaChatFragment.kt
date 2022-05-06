@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asimodabas.uni_chat.databinding.FragmentEngineerBinding
 import com.asimodabas.uni_chat.databinding.FragmentMediaChatBinding
@@ -29,6 +30,7 @@ class MediaChatFragment : Fragment() {
     private lateinit var storage: FirebaseStorage
     private lateinit var mediaArrayList : ArrayList<UniMedia>
     private lateinit var mediaAdapter : MediaRecyclerAdapter
+    private val args: MediaChatFragmentArgs by navArgs()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,22 +55,29 @@ class MediaChatFragment : Fragment() {
 
         mediaArrayList = ArrayList<UniMedia>()
 
-        getData()
-
         binding.mediaChatRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         mediaAdapter = MediaRecyclerAdapter(mediaArrayList)
         binding.mediaChatRecyclerView.adapter = mediaAdapter
 
+        when(args.departmentId) {
+            1 -> {
+                getData("Computer-Media")
+            }
+            2 -> {
+                getData("Chemical-Media")
+            }
+        }
+
         binding.floatingActionButton.setOnClickListener {
-            val action = MediaChatFragmentDirections.actionMediaChatFragmentToUploadMediaFragment()
+            val action = MediaChatFragmentDirections.actionMediaChatFragmentToUploadMediaFragment(args.departmentId)
             findNavController().navigate(action)
         }
 
     }
 
-    fun getData(){
+    private fun getData(collectionPath: String){
 
-        firestore.collection("Computer-Media").orderBy("date",Query.Direction.DESCENDING).addSnapshotListener { value, error ->
+        firestore.collection(collectionPath).orderBy("date",Query.Direction.DESCENDING).addSnapshotListener { value, error ->
             if (error!=null){
                 Toast.makeText(requireContext(),"Hata",Toast.LENGTH_LONG).show()
             }else{

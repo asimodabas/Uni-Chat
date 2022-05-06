@@ -36,15 +36,24 @@ class EngineerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.computerMediaButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment()
+            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(1)
             findNavController().navigate(action)
         }
 
         binding.computerMessageButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment()
+            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(1)
             findNavController().navigate(action)
         }
 
+        binding.chemicalMessageButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(2)
+            findNavController().navigate(action)
+        }
+
+        binding.chemicalMediaButton.setOnClickListener {
+            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(2)
+            findNavController().navigate(action)
+        }
 
     }
 

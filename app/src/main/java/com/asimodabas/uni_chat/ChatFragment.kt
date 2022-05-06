@@ -1,10 +1,14 @@
 package com.asimodabas.uni_chat
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asimodabas.uni_chat.databinding.FragmentChatBinding
 import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
@@ -24,6 +28,7 @@ class ChatFragment : Fragment() {
     private lateinit var firestore: FirebaseFirestore
     private lateinit var adapter: ChatRecyclerAdapter
     private var chats = arrayListOf<UniChat>()
+    private val args: ChatFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +54,16 @@ class ChatFragment : Fragment() {
 
         adapter = ChatRecyclerAdapter()
         binding.chatRecyclerView.adapter = adapter
-        binding.chatRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        when(args.chatType) {
+            0 -> {
+                getChatMessages("Public-Chat")
+            }
+            1 -> {
+                getChatMessages("Computer-Chat")
+            }
+
+        }
 
         binding.sendButton.setOnClickListener {
 
@@ -64,16 +78,34 @@ class ChatFragment : Fragment() {
                 dataMap.put("user", user!!)
                 dataMap.put("date", date)
 
-                firestore.collection("Public-Chat").add(dataMap).addOnSuccessListener {
-                    binding.chatText.setText("")
-                }.addOnFailureListener {
-                    Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
-                    binding.chatText.setText("")
+                when(args.chatType) {
+                    0 -> {
+                        sendMessage("Public-Chat", dataMap)
+                    }
+                    1 -> {
+                        sendMessage("Computer-Chat", dataMap)
+                    }
                 }
+
             }
         }
 
-        firestore.collection("Public-Chat").orderBy("date", Query.Direction.ASCENDING)
+
+
+
+    }
+
+    private fun sendMessage(path: String, dataMap: HashMap<String, Any>) {
+        firestore.collection(path).add(dataMap).addOnSuccessListener {
+            binding.chatText.setText("")
+        }.addOnFailureListener {
+            Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
+            binding.chatText.setText("")
+        }
+    }
+
+    private fun getChatMessages(collectionPath: String) {
+        firestore.collection(collectionPath).orderBy("date", Query.Direction.ASCENDING)
             .addSnapshotListener { value, error ->
 
                 if (error != null) {
@@ -125,8 +157,9 @@ class ChatFragment : Fragment() {
         if (item.itemId == R.id.signout) {
             auth.signOut()
 
-            val action = ChatFragmentDirections.actionChatFragmentToLoginFragment()
-            findNavController().navigate(action)
+
+            findNavController().popBackStack()
+            findNavController().navigateUp()
 
         }
 
@@ -137,6 +170,8 @@ class ChatFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
 
 
 }
