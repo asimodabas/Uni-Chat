@@ -1,17 +1,14 @@
 package com.asimodabas.uni_chat
 
-import android.app.Activity
-import android.content.Context
 import android.os.Bundle
 import android.view.*
-import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.asimodabas.uni_chat.adapter.ChatRecyclerAdapter
 import com.asimodabas.uni_chat.databinding.FragmentChatBinding
-import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
+import com.asimodabas.uni_chat.model.UniChat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FieldValue
@@ -189,7 +186,6 @@ class ChatFragment : Fragment() {
 
         if (item.itemId == R.id.signout) {
             auth.signOut()
-
 
             findNavController().popBackStack()
             findNavController().navigateUp()

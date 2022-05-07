@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@drawable/bg3"
+    android:background="@drawable/page_background"
     tools:context=".LoginFragment">
 
     <ImageView
@@ -14,8 +14,7 @@
         android:layout_width="168dp"
         android:layout_height="121dp"
         android:layout_marginTop="110dp"
-        android:src="@drawable/logo2"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/logo2"        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

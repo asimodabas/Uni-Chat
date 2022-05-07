@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat
+package com.asimodabas.uni_chat.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.asimodabas.uni_chat.R
+import com.asimodabas.uni_chat.model.UniChat
 import com.google.firebase.auth.FirebaseAuth
 
 class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>() {

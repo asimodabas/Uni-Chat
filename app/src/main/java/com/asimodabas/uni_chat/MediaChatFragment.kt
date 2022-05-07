@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asimodabas.uni_chat.adapter.MediaRecyclerAdapter
 import com.asimodabas.uni_chat.databinding.FragmentMediaChatBinding
+import com.asimodabas.uni_chat.model.UniMedia
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
