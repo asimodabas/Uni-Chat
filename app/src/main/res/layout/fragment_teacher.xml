@@ -21,12 +21,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/physicsCardView"
                 android:layout_width="match_parent"
-                android:layout_height="125dp" >
+                android:layout_height="125dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -48,16 +48,16 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/physicsImageView"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/physicsImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        tools:src="@tools:sample/avatars"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
 
                     <Button
                         android:id="@+id/physicsMessageButton"
@@ -69,8 +69,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/physicsImageView"
-                        app:layout_constraintTop_toBottomOf="@+id/physicsMediaButton"
-                        />
+                        app:layout_constraintTop_toBottomOf="@+id/physicsMediaButton" />
 
                     <Button
                         android:id="@+id/physicsMediaButton"
@@ -91,8 +90,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/literatureCardView"
                 android:layout_width="match_parent"
-                android:layout_marginTop="16dp"
-                android:layout_height="125dp">
+                android:layout_height="125dp"
+                android:layout_marginTop="16dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -110,7 +109,7 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/literatureImageView"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/literatureMessageButton"
@@ -122,7 +121,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/literatureImageView"
-                        app:layout_constraintTop_toBottomOf="@+id/literatureMediaButton"/>
+                        app:layout_constraintTop_toBottomOf="@+id/literatureMediaButton" />
 
                     <Button
                         android:id="@+id/literatureMediaButton"
@@ -140,18 +139,18 @@
                         android:id="@+id/literatureImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        tools:src="@tools:sample/avatars"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/chemicalTeacherCardView"
                 android:layout_width="match_parent"
-                android:layout_marginTop="16dp"
-                android:layout_height="125dp">
+                android:layout_height="125dp"
+                android:layout_marginTop="16dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -160,26 +159,26 @@
                     android:backgroundTint="@color/yellow">
 
 
-                <Button
+                    <Button
                         android:id="@+id/chemicalTeacherMessageButton"
-                    android:layout_width="85dp"
-                    android:layout_height="37dp"
-                    android:backgroundTint="#4E3C3C"
-                    android:text="mesaj"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/chemicalTeacherImageView"
-                    app:layout_constraintTop_toBottomOf="@+id/chemicalTeacherMediaButton" />
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="mesaj"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/chemicalTeacherImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/chemicalTeacherMediaButton" />
 
                     <ImageView
                         android:id="@+id/chemicalTeacherImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        tools:src="@tools:sample/avatars"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
 
                     <Button
                         android:id="@+id/chemicalTeacherMediaButton"
@@ -191,7 +190,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/chemicalTeacherImageView"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/chemicalTeacherTextView"
@@ -203,15 +202,15 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/chemicalTeacherImageView"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/mathsCardView"
                 android:layout_width="match_parent"
-                android:layout_marginTop="16dp"
-                android:layout_height="125dp">
+                android:layout_height="125dp"
+                android:layout_marginTop="16dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -220,17 +219,17 @@
                     android:backgroundTint="@color/yellow">
 
 
-                <TextView
-                    android:id="@+id/mathsTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Matematik Öğretmenliği"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/mathsImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/mathsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Matematik Öğretmenliği"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/mathsImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/mathsMediaButton"
@@ -270,8 +269,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/biologyCardView"
                 android:layout_width="match_parent"
-                android:layout_marginTop="16dp"
-                android:layout_height="125dp">
+                android:layout_height="125dp"
+                android:layout_marginTop="16dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -329,8 +328,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/englishCardView"
                 android:layout_width="match_parent"
-                android:layout_marginTop="16dp"
-                android:layout_height="125dp">
+                android:layout_height="125dp"
+                android:layout_marginTop="16dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -390,8 +389,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/geographyCardView"
                 android:layout_width="match_parent"
-                android:layout_marginTop="16dp"
-                android:layout_height="125dp">
+                android:layout_height="125dp"
+                android:layout_marginTop="16dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -449,8 +448,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/historyCardView"
                 android:layout_width="match_parent"
-                android:layout_marginTop="16dp"
-                android:layout_height="125dp">
+                android:layout_height="125dp"
+                android:layout_marginTop="16dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"

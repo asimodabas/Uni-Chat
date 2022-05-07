@@ -16,8 +16,8 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="E- Mail"
-        android:textColor="#000000"
         android:textAlignment="textStart"
+        android:textColor="#000000"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,11 +28,10 @@
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:padding="5dp"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textAlignment="textStart"
         app:layout_constraintTop_toBottomOf="@+id/mediaEmailEditText"
-        app:srcCompat="@drawable/common_google_signin_btn_text_dark"
         app:shapeAppearanceOverlay="@style/MediaRight"
-        />
+        app:srcCompat="@drawable/common_google_signin_btn_text_dark" />
 </LinearLayout>
