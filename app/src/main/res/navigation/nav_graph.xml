@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_secondFragment_to_engineerFragment"
             app:destination="@id/engineerFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_teacherFragment"
+            app:destination="@id/teacherFragment" />
     </fragment>
     <fragment
         android:id="@+id/engineerFragment"
@@ -85,5 +88,14 @@
         <argument
             android:name="departmantId"
             app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherFragment"
+        android:name="com.asimodabas.uni_chat.TeacherFragment"
+        android:label="fragment_teacher"
+        tools:layout="@layout/fragment_teacher" >
+        <action
+            android:id="@+id/action_teacherFragment_to_mediaChatFragment"
+            app:destination="@id/mediaChatFragment" />
     </fragment>
 </navigation>

@@ -41,6 +41,11 @@ class SecondFragment : Fragment() {
             findNavController().navigate(action)
         }
 
+        binding.teacherButton.setOnClickListener {
+            val action = SecondFragmentDirections.actionSecondFragmentToTeacherFragment()
+            findNavController().navigate(action)
+        }
+
     }
 
     override fun onDestroyView() {
