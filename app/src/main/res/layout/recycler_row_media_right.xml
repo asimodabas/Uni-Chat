@@ -23,15 +23,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/mediaImageView"
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:background="@drawable/message_background_right"
-        android:layout_margin="5dp"
-        android:textAlignment="textStart"
+        android:padding="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="textStart"
         app:layout_constraintTop_toBottomOf="@+id/mediaEmailEditText"
-        app:srcCompat="@drawable/common_google_signin_btn_text_dark" />
+        app:srcCompat="@drawable/common_google_signin_btn_text_dark"
+        app:shapeAppearanceOverlay="@style/MediaRight"
+        />
 </LinearLayout>

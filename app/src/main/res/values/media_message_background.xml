@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MediaLeft">
+
+        <item name="cornerSizeTopLeft">75dp</item>
+        <item name="cornerSizeTopRight">75dp</item>
+
+        <item name="cornerSizeBottomRight">75dp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+    </style>
+
+    <style name="MediaRight">
+
+        <item name="cornerSizeTopLeft">75dp</item>
+        <item name="cornerSizeTopRight">75dp</item>
+
+        <item name="cornerFamilyBottomRight">rounded</item>
+        <item name="cornerSizeBottomLeft">75dp</item>
+    </style>
+
+</resources>

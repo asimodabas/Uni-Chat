@@ -66,7 +66,7 @@ class UploadMediaFragment : Fragment() {
         }
 
         binding.UploadButton.setOnClickListener {
-            when(args.departmantId) {
+            when (args.departmantId) {
                 1 -> {
                     upload("Computer-Media")
 

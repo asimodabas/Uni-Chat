@@ -30,7 +30,6 @@ class MediaChatFragment : Fragment() {
     private lateinit var mediaAdapter: MediaRecyclerAdapter
     private val args: MediaChatFragmentArgs by navArgs()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -87,7 +86,6 @@ class MediaChatFragment : Fragment() {
                 MediaChatFragmentDirections.actionMediaChatFragmentToUploadMediaFragment(args.departmentId)
             findNavController().navigate(action)
         }
-
     }
 
     private fun getData(collectionPath: String) {
