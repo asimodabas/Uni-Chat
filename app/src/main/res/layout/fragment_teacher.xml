@@ -57,7 +57,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/physicsteacher" />
 
                     <Button
                         android:id="@+id/physicsMessageButton"
@@ -142,7 +142,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/literatureteacher" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -178,7 +178,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/chemicalteacher" />
 
                     <Button
                         android:id="@+id/chemicalTeacherMediaButton"
@@ -262,7 +262,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/mathsteacher" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -307,7 +307,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="Endüstri Mühendisliği"
+                        android:text="Biyoloji Öğretmenliği"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -321,7 +321,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/biologyteacher" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -342,7 +342,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="Endüstri Mühendisliği"
+                        android:text="İngilizce Öğretmenliği"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -381,7 +381,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/englishteacher" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
@@ -417,14 +417,14 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/geographyteacher" />
 
                     <TextView
                         android:id="@+id/geographyTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="Endüstri Mühendisliği"
+                        android:text="Coğrafya Öğretmenliği"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -462,7 +462,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="Endüstri Mühendisliği"
+                        android:text="Tarih Öğretmenliği"
                         android:textColor="#000000"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -500,7 +500,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@tools:sample/avatars" />
+                        android:src="@drawable/historyteacher" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
