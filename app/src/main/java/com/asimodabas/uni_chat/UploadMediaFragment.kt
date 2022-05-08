@@ -62,7 +62,6 @@ class UploadMediaFragment : Fragment() {
 
         binding.uploadImageView.setOnClickListener {
             selected_image(it)
-
         }
 
         binding.UploadButton.setOnClickListener {
@@ -116,7 +115,6 @@ class UploadMediaFragment : Fragment() {
                 }
             }
         }
-
     }
 
     fun selected_image(view: View) {
@@ -172,7 +170,6 @@ class UploadMediaFragment : Fragment() {
                         }
                     }
                 }
-
             }.addOnFailureListener {
                 Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
             }

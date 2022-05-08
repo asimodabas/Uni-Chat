@@ -106,7 +106,6 @@ class MediaChatFragment : Fragment() {
             15 -> {
                 getData("Teacher-History-Media")
             }
-
         }
 
         binding.floatingActionButton.setOnClickListener {
@@ -124,13 +123,15 @@ class MediaChatFragment : Fragment() {
                     Toast.makeText(requireContext(), "Hata", Toast.LENGTH_LONG).show()
                 } else {
                     if (value != null) {
-                        if (!value.isEmpty) {
+                        if (value.isEmpty) {
+                            Toast.makeText(requireContext(), "Mesaj Yok", Toast.LENGTH_SHORT).show()
+                        }else{
+
                             val documents = value.documents
 
                             mediaArrayList.clear()
 
                             for (document in documents) {
-
 
                                 val useremail = document.get("userEmail") as String
                                 val downloadUrl = document.get("downloadUrl") as String
@@ -143,6 +144,7 @@ class MediaChatFragment : Fragment() {
 
                             mediaAdapter.medias = mediaArrayList
                             mediaAdapter.notifyDataSetChanged()
+
                         }
                     }
                 }

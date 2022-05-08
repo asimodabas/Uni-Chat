@@ -103,7 +103,6 @@ class ChatFragment : Fragment() {
             15 -> {
                 getChatMessages("Teacher-History-Chat")
             }
-
         }
 
         binding.sendButton.setOnClickListener {
@@ -171,10 +170,8 @@ class ChatFragment : Fragment() {
                         sendMessage("Teacher-History-Chat", dataMap)
                     }
                 }
-
             }
         }
-
     }
 
     private fun sendMessage(path: String, dataMap: HashMap<String, Any>) {
@@ -200,7 +197,6 @@ class ChatFragment : Fragment() {
                         } else {
 
                             // Data pulled from firebase database
-
                             val documents = value.documents
 
                             chats.clear() //dump existing messages before loop

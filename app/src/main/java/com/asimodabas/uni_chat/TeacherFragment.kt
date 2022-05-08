@@ -30,7 +30,6 @@ class TeacherFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 //Physics
         binding.physicsMediaButton.setOnClickListener {
             val action = TeacherFragmentDirections.actionTeacherFragmentToMediaChatFragment(8)
@@ -111,13 +110,10 @@ class TeacherFragment : Fragment() {
             val action = TeacherFragmentDirections.actionTeacherFragmentToChatFragment(15)
             findNavController().navigate(action)
         }
-
-
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }

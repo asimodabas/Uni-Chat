@@ -34,7 +34,6 @@ class EngineerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 //Computer
         binding.computerMediaButton.setOnClickListener {
             val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(1)
