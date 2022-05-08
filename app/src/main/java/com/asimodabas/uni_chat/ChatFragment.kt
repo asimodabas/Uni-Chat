@@ -57,25 +57,25 @@ class ChatFragment : Fragment() {
                 getChatMessages("Public-Chat")
             }
             1 -> {
-                getChatMessages("Computer-Chat")
+                getChatMessages("Engineer-Computer-Chat")
             }
             2 -> {
-                getChatMessages("Chemical-Chat")
+                getChatMessages("Engineer-Chemical-Chat")
             }
             3 -> {
-                getChatMessages("Industry-Chat")
+                getChatMessages("Engineer-Industry-Chat")
             }
             4 -> {
-                getChatMessages("Build-Chat")
+                getChatMessages("Engineer-Build-Chat")
             }
             5 -> {
-                getChatMessages("Food-Chat")
+                getChatMessages("Engineer-Food-Chat")
             }
             6 -> {
-                getChatMessages("Electric-Chat")
+                getChatMessages("Engineer-Electric-Chat")
             }
             7 -> {
-                getChatMessages("Machine-Chat")
+                getChatMessages("Engineer-Machine-Chat")
             }
 
         }
@@ -98,25 +98,25 @@ class ChatFragment : Fragment() {
                         sendMessage("Public-Chat", dataMap)
                     }
                     1 -> {
-                        sendMessage("Computer-Chat", dataMap)
+                        sendMessage("Engineer-Computer-Chat", dataMap)
                     }
                     2 -> {
-                        sendMessage("Chemical-Chat", dataMap)
+                        sendMessage("Engineer-Chemical-Chat", dataMap)
                     }
                     3 -> {
-                        sendMessage("Industry-Chat", dataMap)
+                        sendMessage("Engineer-Industry-Chat", dataMap)
                     }
                     4 -> {
-                        sendMessage("Build-Chat", dataMap)
+                        sendMessage("Engineer-Build-Chat", dataMap)
                     }
                     5 -> {
-                        sendMessage("Food-Chat", dataMap)
+                        sendMessage("Engineer-Food-Chat", dataMap)
                     }
                     6 -> {
-                        sendMessage("Electric-Chat", dataMap)
+                        sendMessage("Engineer-Electric-Chat", dataMap)
                     }
                     7 -> {
-                        sendMessage("Machine-Chat", dataMap)
+                        sendMessage("Engineer-Machine-Chat", dataMap)
                     }
                 }
 

@@ -68,31 +68,31 @@ class UploadMediaFragment : Fragment() {
         binding.UploadButton.setOnClickListener {
             when (args.departmantId) {
                 1 -> {
-                    upload("Computer-Media")
+                    upload("Engineer-Computer-Media")
 
                 }
                 2 -> {
-                    upload("Chemical-Media")
+                    upload("Engineer-Chemical-Media")
 
                 }
                 3 -> {
-                    upload("Industry-Media")
+                    upload("Engineer-Industry-Media")
 
                 }
                 4 -> {
-                    upload("Build-Media")
+                    upload("Engineer-Build-Media")
 
                 }
                 5 -> {
-                    upload("Food-Media")
+                    upload("Engineer-Food-Media")
 
                 }
                 6 -> {
-                    upload("Electric-Media")
+                    upload("Engineer-Electric-Media")
 
                 }
                 7 -> {
-                    upload("Machine-Media")
+                    upload("Engineer-Machine-Media")
 
                 }
 

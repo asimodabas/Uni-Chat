@@ -61,25 +61,25 @@ class MediaChatFragment : Fragment() {
         when (args.departmentId) {
 
             1 -> {
-                getData("Computer-Media")
+                getData("Engineer-Computer-Media")
             }
             2 -> {
-                getData("Chemical-Media")
+                getData("Engineer-Chemical-Media")
             }
             3 -> {
-                getData("Industry-Media")
+                getData("Engineer-Industry-Media")
             }
             4 -> {
-                getData("Build-Media")
+                getData("Engineer-Build-Media")
             }
             5 -> {
-                getData("Food-Media")
+                getData("Engineer-Food-Media")
             }
             6 -> {
-                getData("Electric-Media")
+                getData("Engineer-Electric-Media")
             }
             7 -> {
-                getData("Machine-Media")
+                getData("Engineer-Machine-Media")
             }
         }
 
