@@ -67,35 +67,53 @@ class UploadMediaFragment : Fragment() {
 
         binding.UploadButton.setOnClickListener {
             when (args.departmantId) {
+            //Engineer
                 1 -> {
                     upload("Engineer-Computer-Media")
-
                 }
                 2 -> {
                     upload("Engineer-Chemical-Media")
-
                 }
                 3 -> {
                     upload("Engineer-Industry-Media")
-
                 }
                 4 -> {
                     upload("Engineer-Build-Media")
-
                 }
                 5 -> {
                     upload("Engineer-Food-Media")
-
                 }
                 6 -> {
                     upload("Engineer-Electric-Media")
-
                 }
                 7 -> {
                     upload("Engineer-Machine-Media")
-
                 }
-
+            //Teacher
+                8 -> {
+                    upload("Teacher-Physics-Media")
+                }
+                9 -> {
+                    upload("Teacher-Literature-Media")
+                }
+                10 -> {
+                    upload("Teacher-Chemical-Media")
+                }
+                11 -> {
+                    upload("Teacher-Maths-Media")
+                }
+                12 -> {
+                    upload("Teacher-Biology-Media")
+                }
+                13 -> {
+                    upload("Teacher-English-Media")
+                }
+                14 -> {
+                    upload("Teacher-Geography-Media")
+                }
+                15 -> {
+                    upload("Teacher-History-Media")
+                }
             }
         }
 

@@ -56,6 +56,7 @@ class ChatFragment : Fragment() {
             0 -> {
                 getChatMessages("Public-Chat")
             }
+        //Engineer
             1 -> {
                 getChatMessages("Engineer-Computer-Chat")
             }
@@ -77,6 +78,31 @@ class ChatFragment : Fragment() {
             7 -> {
                 getChatMessages("Engineer-Machine-Chat")
             }
+        //Teacher
+            8 -> {
+                getChatMessages("Teacher-Physics-Chat")
+            }
+            9 -> {
+                getChatMessages("Teacher-Literature-Chat")
+            }
+            10 -> {
+                getChatMessages("Teacher-Chemical-Chat")
+            }
+            11 -> {
+                getChatMessages("Teacher-Maths-Chat")
+            }
+            12 -> {
+                getChatMessages("Teacher-Biology-Chat")
+            }
+            13 -> {
+                getChatMessages("Teacher-English-Chat")
+            }
+            14 -> {
+                getChatMessages("Teacher-Geography-Chat")
+            }
+            15 -> {
+                getChatMessages("Teacher-History-Chat")
+            }
 
         }
 
@@ -97,6 +123,7 @@ class ChatFragment : Fragment() {
                     0 -> {
                         sendMessage("Public-Chat", dataMap)
                     }
+                //Engineer
                     1 -> {
                         sendMessage("Engineer-Computer-Chat", dataMap)
                     }
@@ -117,6 +144,31 @@ class ChatFragment : Fragment() {
                     }
                     7 -> {
                         sendMessage("Engineer-Machine-Chat", dataMap)
+                    }
+                //Teacher
+                    8 -> {
+                        sendMessage("Teacher-Physics-Chat", dataMap)
+                    }
+                    9 -> {
+                        sendMessage("Teacher-Literature-Chat", dataMap)
+                    }
+                    10 -> {
+                        sendMessage("Teacher-Chemical-Chat", dataMap)
+                    }
+                    11 -> {
+                        sendMessage("Teacher-Maths-Chat", dataMap)
+                    }
+                    12 -> {
+                        sendMessage("Teacher-Biology-Chat", dataMap)
+                    }
+                    13 -> {
+                        sendMessage("Teacher-English-Chat", dataMap)
+                    }
+                    14 -> {
+                        sendMessage("Teacher-Geography-Chat", dataMap)
+                    }
+                    15 -> {
+                        sendMessage("Teacher-History-Chat", dataMap)
                     }
                 }
 

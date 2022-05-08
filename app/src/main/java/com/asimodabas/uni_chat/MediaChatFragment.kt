@@ -59,7 +59,7 @@ class MediaChatFragment : Fragment() {
         binding.mediaChatRecyclerView.adapter = mediaAdapter
 
         when (args.departmentId) {
-
+        //Engineer
             1 -> {
                 getData("Engineer-Computer-Media")
             }
@@ -81,6 +81,32 @@ class MediaChatFragment : Fragment() {
             7 -> {
                 getData("Engineer-Machine-Media")
             }
+        //Teacher
+            8 -> {
+                getData("Teacher-Physics-Media")
+            }
+            9 -> {
+                getData("Teacher-Literature-Media")
+            }
+            10 -> {
+                getData("Teacher-Chemical-Media")
+            }
+            11 -> {
+                getData("Teacher-Maths-Media")
+            }
+            12 -> {
+                getData("Teacher-Biology-Media")
+            }
+            13 -> {
+                getData("Teacher-English-Media")
+            }
+            14 -> {
+                getData("Teacher-Geography-Media")
+            }
+            15 -> {
+                getData("Teacher-History-Media")
+            }
+
         }
 
         binding.floatingActionButton.setOnClickListener {
