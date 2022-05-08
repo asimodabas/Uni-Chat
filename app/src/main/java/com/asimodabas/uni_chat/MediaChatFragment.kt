@@ -59,7 +59,7 @@ class MediaChatFragment : Fragment() {
         binding.mediaChatRecyclerView.adapter = mediaAdapter
 
         when (args.departmentId) {
-        //Engineer
+            //Engineer
             1 -> {
                 getData("Engineer-Computer-Media")
             }
@@ -81,7 +81,7 @@ class MediaChatFragment : Fragment() {
             7 -> {
                 getData("Engineer-Machine-Media")
             }
-        //Teacher
+            //Teacher
             8 -> {
                 getData("Teacher-Physics-Media")
             }
@@ -125,7 +125,7 @@ class MediaChatFragment : Fragment() {
                     if (value != null) {
                         if (value.isEmpty) {
                             Toast.makeText(requireContext(), "Mesaj Yok", Toast.LENGTH_SHORT).show()
-                        }else{
+                        } else {
 
                             val documents = value.documents
 

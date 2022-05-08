@@ -52,11 +52,11 @@ class ChatFragment : Fragment() {
         adapter = ChatRecyclerAdapter()
         binding.chatRecyclerView.adapter = adapter
 
-        when(args.chatType) {
+        when (args.chatType) {
             0 -> {
                 getChatMessages("Public-Chat")
             }
-        //Engineer
+            //Engineer
             1 -> {
                 getChatMessages("Engineer-Computer-Chat")
             }
@@ -78,7 +78,7 @@ class ChatFragment : Fragment() {
             7 -> {
                 getChatMessages("Engineer-Machine-Chat")
             }
-        //Teacher
+            //Teacher
             8 -> {
                 getChatMessages("Teacher-Physics-Chat")
             }
@@ -118,11 +118,11 @@ class ChatFragment : Fragment() {
                 dataMap.put("user", user!!)
                 dataMap.put("date", date)
 
-                when(args.chatType) {
+                when (args.chatType) {
                     0 -> {
                         sendMessage("Public-Chat", dataMap)
                     }
-                //Engineer
+                    //Engineer
                     1 -> {
                         sendMessage("Engineer-Computer-Chat", dataMap)
                     }
@@ -144,7 +144,7 @@ class ChatFragment : Fragment() {
                     7 -> {
                         sendMessage("Engineer-Machine-Chat", dataMap)
                     }
-                //Teacher
+                    //Teacher
                     8 -> {
                         sendMessage("Teacher-Physics-Chat", dataMap)
                     }
@@ -247,8 +247,6 @@ class ChatFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-
 
 
 }

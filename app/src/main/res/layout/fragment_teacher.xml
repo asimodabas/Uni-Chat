@@ -54,10 +54,10 @@
                         android:id="@+id/physicsImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/physicsteacher"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/physicsteacher" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/physicsMessageButton"
@@ -139,10 +139,10 @@
                         android:id="@+id/literatureImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/literatureteacher"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/literatureteacher" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -175,10 +175,10 @@
                         android:id="@+id/chemicalTeacherImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/chemicalteacher"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/chemicalteacher" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/chemicalTeacherMediaButton"
@@ -259,10 +259,10 @@
                         android:id="@+id/mathsImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/mathsteacher"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/mathsteacher" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -318,10 +318,10 @@
                         android:id="@+id/biologyImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/biologyteacher"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/biologyteacher" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -378,10 +378,10 @@
                         android:id="@+id/englishImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/englishteacher"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/englishteacher" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
@@ -414,10 +414,10 @@
                         android:id="@+id/geographyImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/geographyteacher"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/geographyteacher" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/geographyTextView"
@@ -497,10 +497,10 @@
                         android:id="@+id/historyImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/historyteacher"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/historyteacher" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 

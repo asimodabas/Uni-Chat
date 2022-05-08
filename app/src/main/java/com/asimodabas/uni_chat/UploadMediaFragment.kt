@@ -61,12 +61,12 @@ class UploadMediaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.uploadImageView.setOnClickListener {
-            selected_image(it)
+            selected_image()
         }
 
         binding.UploadButton.setOnClickListener {
             when (args.departmantId) {
-            //Engineer
+                //Engineer
                 1 -> {
                     upload("Engineer-Computer-Media")
                 }
@@ -88,7 +88,7 @@ class UploadMediaFragment : Fragment() {
                 7 -> {
                     upload("Engineer-Machine-Media")
                 }
-            //Teacher
+                //Teacher
                 8 -> {
                     upload("Teacher-Physics-Media")
                 }
@@ -117,7 +117,7 @@ class UploadMediaFragment : Fragment() {
         }
     }
 
-    fun selected_image(view: View) {
+    fun selected_image() {
         activity?.let {
             if (ContextCompat.checkSelfPermission(
                     it.applicationContext,
@@ -162,7 +162,6 @@ class UploadMediaFragment : Fragment() {
 
                             Toast.makeText(requireContext(), "Paylaşım Başarılı", Toast.LENGTH_LONG)
                                 .show()
-
                             findNavController().navigateUp()
 
                         }.addOnFailureListener {
@@ -197,7 +196,6 @@ class UploadMediaFragment : Fragment() {
             selectedImage = data.data
         }
         try {
-
             context?.let {
                 if (selectedImage != null) {
                     if (Build.VERSION.SDK_INT >= 28) {
@@ -218,7 +216,6 @@ class UploadMediaFragment : Fragment() {
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
