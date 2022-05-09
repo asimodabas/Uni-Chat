@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_secondFragment_to_teacherFragment"
             app:destination="@id/teacherFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_healthFragment"
+            app:destination="@id/healthFragment" />
     </fragment>
     <fragment
         android:id="@+id/engineerFragment"
@@ -98,4 +101,9 @@
             android:id="@+id/action_teacherFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/healthFragment"
+        android:name="com.asimodabas.uni_chat.HealthFragment"
+        android:label="fragment_health"
+        tools:layout="@layout/fragment_health" />
 </navigation>
