@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.asimodabas.uni_chat.LoginFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.asimodabas.uni_chat.ChatFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.ChatFragment"
         android:label="fragment_chat"
         tools:layout="@layout/fragment_chat" >
         <argument
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/createFragment"
-        android:name="com.asimodabas.uni_chat.CreateFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.CreateFragment"
         android:label="fragment_create"
         tools:layout="@layout/fragment_create" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.asimodabas.uni_chat.SecondFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" >
         <action
@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/engineerFragment"
-        android:name="com.asimodabas.uni_chat.EngineerFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.EngineerFragment"
         android:label="fragment_engineer"
         tools:layout="@layout/fragment_engineer" >
         <action
@@ -67,7 +67,7 @@
     </fragment>
     <fragment
         android:id="@+id/mediaChatFragment"
-        android:name="com.asimodabas.uni_chat.MediaChatFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.MediaChatFragment"
         android:label="fragment_media_chat"
         tools:layout="@layout/fragment_media_chat" >
         <action
@@ -79,7 +79,7 @@
     </fragment>
     <fragment
         android:id="@+id/uploadMediaFragment"
-        android:name="com.asimodabas.uni_chat.UploadMediaFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.UploadMediaFragment"
         android:label="fragment_upload_media"
         tools:layout="@layout/fragment_upload_media" >
         <action
@@ -91,7 +91,7 @@
     </fragment>
     <fragment
         android:id="@+id/teacherFragment"
-        android:name="com.asimodabas.uni_chat.TeacherFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.TeacherFragment"
         android:label="fragment_teacher"
         tools:layout="@layout/fragment_teacher" >
         <action
@@ -103,7 +103,7 @@
     </fragment>
     <fragment
         android:id="@+id/healthFragment"
-        android:name="com.asimodabas.uni_chat.HealthFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.HealthFragment"
         android:label="fragment_health"
         tools:layout="@layout/fragment_health" />
 </navigation>

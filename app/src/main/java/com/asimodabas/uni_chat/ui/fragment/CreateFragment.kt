@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat
+package com.asimodabas.uni_chat.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.asimodabas.uni_chat.databinding.FragmentCreateBinding
-import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -68,7 +67,8 @@ class CreateFragment : Fragment() {
                         binding.nameEditText.setText("")
                         binding.surnameEditText.setText("")
 
-                        val action = CreateFragmentDirections.actionCreateFragmentToSecondFragment()
+                        val action =
+                            CreateFragmentDirections.actionCreateFragmentToSecondFragment()
                         findNavController().navigate(action)
 
                     }.addOnFailureListener {

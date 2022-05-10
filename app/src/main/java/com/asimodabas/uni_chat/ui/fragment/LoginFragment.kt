@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat
+package com.asimodabas.uni_chat.ui.fragment
 
 import android.os.Bundle
 import android.text.TextUtils
@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -28,7 +27,8 @@ class LoginFragment : Fragment() {
         val currentUser = auth.currentUser
 
         if (currentUser != null) {
-            val action = LoginFragmentDirections.actionLoginFragmentToSecondFragment()
+            val action =
+                LoginFragmentDirections.actionLoginFragmentToSecondFragment()
             findNavController().navigate(action)
         }
 
@@ -70,7 +70,8 @@ class LoginFragment : Fragment() {
                     binding.passwordText.text.toString()
                 ).addOnSuccessListener {
 
-                    val action = LoginFragmentDirections.actionLoginFragmentToSecondFragment()
+                    val action =
+                        LoginFragmentDirections.actionLoginFragmentToSecondFragment()
                     findNavController().navigate(action)
 
                 }.addOnFailureListener {
@@ -82,7 +83,8 @@ class LoginFragment : Fragment() {
         }
         binding.signupButton.setOnClickListener {
 
-            val action = LoginFragmentDirections.actionLoginFragmentToCreateFragment()
+            val action =
+                LoginFragmentDirections.actionLoginFragmentToCreateFragment()
             findNavController().navigate(action)
 
         }

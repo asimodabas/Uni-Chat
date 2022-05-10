@@ -12,7 +12,7 @@
     android:paddingEnd="5dp"
     android:paddingBottom="10dp"
     android:visibility="visible"
-    tools:context=".TeacherFragment">
+    tools:context=".ui.fragment.TeacherFragment">
 
     <ScrollView
         android:layout_width="match_parent"

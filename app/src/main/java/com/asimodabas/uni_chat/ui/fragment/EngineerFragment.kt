@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat
+package com.asimodabas.uni_chat.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,11 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.asimodabas.uni_chat.databinding.FragmentChatBinding
 import com.asimodabas.uni_chat.databinding.FragmentEngineerBinding
-import com.asimodabas.uni_chat.databinding.FragmentSecondBinding
 
 class EngineerFragment : Fragment() {
 
@@ -36,72 +32,114 @@ class EngineerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 //Computer
         binding.computerMediaButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(1)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(
+                    1
+                )
             findNavController().navigate(action)
         }
 
         binding.computerMessageButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(1)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToChatFragment(
+                    1
+                )
             findNavController().navigate(action)
         }
 //Chemical
         binding.chemicalMediaButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(2)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(
+                    2
+                )
             findNavController().navigate(action)
         }
 
         binding.chemicalMessageButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(2)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToChatFragment(
+                    2
+                )
             findNavController().navigate(action)
         }
 //Industry
         binding.industryMediaButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(3)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(
+                    3
+                )
             findNavController().navigate(action)
         }
 
         binding.industryMessageButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(3)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToChatFragment(
+                    3
+                )
             findNavController().navigate(action)
         }
 //Build
         binding.buildMediaButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(4)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(
+                    4
+                )
             findNavController().navigate(action)
         }
 
         binding.buildMessageButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(4)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToChatFragment(
+                    4
+                )
             findNavController().navigate(action)
         }
 //Food
         binding.foodMediaButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(5)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(
+                    5
+                )
             findNavController().navigate(action)
         }
 
         binding.foodMessageButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(5)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToChatFragment(
+                    5
+                )
             findNavController().navigate(action)
         }
 //Electric
         binding.electricMediaButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(6)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(
+                    6
+                )
             findNavController().navigate(action)
         }
 
         binding.electricMessageButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(6)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToChatFragment(
+                    6
+                )
             findNavController().navigate(action)
         }
 //Machine
         binding.machineMediaButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(7)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToMediaChatFragment(
+                    7
+                )
             findNavController().navigate(action)
         }
 
         binding.machineMessageButton.setOnClickListener {
-            val action = EngineerFragmentDirections.actionEngineerFragmentToChatFragment(7)
+            val action =
+                EngineerFragmentDirections.actionEngineerFragmentToChatFragment(
+                    7
+                )
             findNavController().navigate(action)
         }
     }

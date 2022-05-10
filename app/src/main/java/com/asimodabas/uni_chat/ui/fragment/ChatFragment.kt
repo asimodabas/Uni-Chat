@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat
+package com.asimodabas.uni_chat.ui.fragment
 
 import android.os.Bundle
 import android.view.*
@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.adapter.ChatRecyclerAdapter
 import com.asimodabas.uni_chat.databinding.FragmentChatBinding
 import com.asimodabas.uni_chat.model.UniChat

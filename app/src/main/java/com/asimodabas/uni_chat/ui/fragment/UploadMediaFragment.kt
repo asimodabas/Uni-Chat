@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat
+package com.asimodabas.uni_chat.ui.fragment
 
 import android.app.Activity
 import android.content.Intent

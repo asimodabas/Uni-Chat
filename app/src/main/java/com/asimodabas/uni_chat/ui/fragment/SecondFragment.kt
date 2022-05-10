@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat
+package com.asimodabas.uni_chat.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.asimodabas.uni_chat.databinding.FragmentCreateBinding
 import com.asimodabas.uni_chat.databinding.FragmentSecondBinding
 
 class SecondFragment : Fragment() {
@@ -32,22 +31,28 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.PublicButton.setOnClickListener {
-            val action = SecondFragmentDirections.actionSecondFragmentToChatFragment(0)
+            val action =
+                SecondFragmentDirections.actionSecondFragmentToChatFragment(
+                    0
+                )
             findNavController().navigate(action)
         }
 
         binding.engineerButton.setOnClickListener {
-            val action = SecondFragmentDirections.actionSecondFragmentToEngineerFragment()
+            val action =
+                SecondFragmentDirections.actionSecondFragmentToEngineerFragment()
             findNavController().navigate(action)
         }
 
         binding.teacherButton.setOnClickListener {
-            val action = SecondFragmentDirections.actionSecondFragmentToTeacherFragment()
+            val action =
+                SecondFragmentDirections.actionSecondFragmentToTeacherFragment()
             findNavController().navigate(action)
         }
 
         binding.healthButton.setOnClickListener {
-            val action = SecondFragmentDirections.actionSecondFragmentToHealthFragment()
+            val action =
+                SecondFragmentDirections.actionSecondFragmentToHealthFragment()
             findNavController().navigate(action)
         }
     }

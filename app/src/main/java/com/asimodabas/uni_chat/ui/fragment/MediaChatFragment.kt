@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat
+package com.asimodabas.uni_chat.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -110,7 +110,9 @@ class MediaChatFragment : Fragment() {
 
         binding.floatingActionButton.setOnClickListener {
             val action =
-                MediaChatFragmentDirections.actionMediaChatFragmentToUploadMediaFragment(args.departmentId)
+                MediaChatFragmentDirections.actionMediaChatFragmentToUploadMediaFragment(
+                    args.departmentId
+                )
             findNavController().navigate(action)
         }
     }
