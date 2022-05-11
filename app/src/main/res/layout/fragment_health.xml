@@ -86,10 +86,458 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dentistCardView"
+                android:layout_width="match_parent"
+                android:layout_height="125dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                        android:background="@drawable/edittext_background"
+                    android:backgroundTint="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="@+id/dentistMessageButton"
+                    app:layout_constraintTop_toBottomOf="@+id/dentistMessageButton">
+
+                <TextView
+                    android:id="@+id/dentistTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                    android:text="Diş Hekimliği"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/dentistImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/dentistMessageButton"
+                           android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Mesaj"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/dentistImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/dentistMediaButton"/>
+
+                    <Button
+                        android:id="@+id/dentistMediaButton"
+                            android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Medya"
+                        app:layout_constraintBottom_toTopOf="@+id/dentistMessageButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/dentistImageView"
+                          app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/dentistImageView"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/nurseCardView"
+                android:layout_width="match_parent"
+                android:layout_height="125dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:backgroundTint="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="@+id/nurseMessageButton"
+                    app:layout_constraintTop_toBottomOf="@+id/nurseMessageButton">
+
+
+
+                <Button
+                        android:id="@+id/nurseMediaButton"
+                    android:layout_width="85dp"
+                    android:layout_height="37dp"
+                    android:backgroundTint="#4E3C3C"
+                    android:text="Medya"
+                    app:layout_constraintBottom_toTopOf="@+id/nurseMessageButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                       app:layout_constraintStart_toStartOf="@+id/nurseImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/nurseMessageButton"
+                         android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Mesaj"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/nurseImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/nurseMediaButton"/>
+
+
+                    <ImageView
+                        android:id="@+id/nurseImageView"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                           app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/nurseTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                         android:text="Hemşirelik"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/nurseImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/psychologyCardView"
+                android:layout_width="match_parent"
+                android:layout_height="125dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:backgroundTint="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="@+id/psychologyMessageButton"
+                    app:layout_constraintTop_toBottomOf="@+id/psychologyMessageButton">
+
+                    <TextView
+                             android:id="@+id/psychologyTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Psikoloji"
+                         android:textColor="#000000"
+                        android:textSize="15sp"
+                             android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/psychologyImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/psychologyMessageButton"
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                            android:text="Mesaj"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/psychologyImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/psychologyMediaButton"/>
+
+
+                    <Button
+                        android:id="@+id/psychologyMediaButton"
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                           android:text="Medya"
+                        app:layout_constraintBottom_toTopOf="@+id/psychologyMessageButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                               app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/psychologyImageView"
+                                 app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/psychologyImageView"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pharmacyCardView"
+                android:layout_width="match_parent"
+                android:layout_height="125dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:backgroundTint="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="@+id/pharmacyMessageButton"
+                    app:layout_constraintTop_toBottomOf="@+id/pharmacyMessageButton">
+
+
+                <TextView
+                        android:id="@+id/pharmacyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Eczacılık"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/pharmacyImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/pharmacyMessageButton"
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Mesaj"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/pharmacyImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/pharmacyMediaButton"/>
+
+
+                    <Button
+                        android:id="@+id/pharmacyMediaButton"
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Medya"
+                        app:layout_constraintBottom_toTopOf="@+id/pharmacyMessageButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/pharmacyImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/pharmacyImageView"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/veterinaryCardView"
+                android:layout_width="match_parent"
+                android:layout_height="125dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:backgroundTint="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="@+id/pharmacyMessageButton"
+                    app:layout_constraintTop_toBottomOf="@+id/pharmacyMessageButton">
+
+                <Button
+                        android:id="@+id/veterinaryMessageButton"
+                    android:layout_width="85dp"
+                    android:layout_height="37dp"
+                    android:backgroundTint="#4E3C3C"
+                    android:text="Mesaj"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/veterinaryImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/veterinaryMediaButton"/>
+
+
+                    <TextView
+                        android:id="@+id/veterinaryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Veterinerlik"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/veterinaryImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/veterinaryMediaButton"
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Medya"
+                        app:layout_constraintBottom_toTopOf="@+id/veterinaryMessageButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/veterinaryImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/veterinaryImageView"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/dieteticsCardView"
+                android:layout_width="match_parent"
+                android:layout_height="125dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:backgroundTint="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="@+id/dieteticsMessageButton"
+                    app:layout_constraintTop_toBottomOf="@+id/dieteticsMessageButton">
+
+                <TextView
+                        android:id="@+id/dieteticsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Beslenme ve Diyetik"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/dieteticsImageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/dieteticsMessageButton"
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Mesaj"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/dieteticsImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/dieteticsMediaButton" />
+
+
+                    <Button
+                        android:id="@+id/dieteticsMediaButton"
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Medya"
+                        app:layout_constraintBottom_toTopOf="@+id/dieteticsMessageButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/dieteticsImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/dieteticsImageView"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rehabilitationCardView"
+                android:layout_width="match_parent"
+                android:layout_height="125dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:backgroundTint="@color/yellow"
+                    app:layout_constraintBottom_toBottomOf="@+id/nurseMessageButton"
+                    app:layout_constraintTop_toBottomOf="@+id/nurseMessageButton">
+
+
+                    <ImageView
+                        android:id="@+id/rehabilitationImageView"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <Button
+                        android:id="@+id/rehabilitationMessageButton"
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Mesaj"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/rehabilitationImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/rehabilitationMediaButton" />
+
+                    <Button
+                        android:id="@+id/rehabilitationMediaButton"
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Medya"
+                        app:layout_constraintBottom_toTopOf="@+id/rehabilitationMessageButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/rehabilitationImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/rehabilitationTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Fizik Tedavi-Rehabilitasyon"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/rehabilitationImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
 
     </ScrollView>
-
 
 
 </LinearLayout>
