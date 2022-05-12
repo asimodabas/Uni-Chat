@@ -104,6 +104,31 @@ class ChatFragment : Fragment() {
             15 -> {
                 getChatMessages("Teacher-History-Chat")
             }
+            16 -> {
+                getChatMessages("Health-Medicine-Chat")
+            }
+            17 -> {
+                getChatMessages("Health-Dentist-Chat")
+            }
+            18 -> {
+                getChatMessages("Health-Nurse-Chat")
+            }
+            19 -> {
+                getChatMessages("Health-Psychology-Chat")
+            }
+            20 -> {
+                getChatMessages("Health-Pharmacy-Chat")
+            }
+            21 -> {
+                getChatMessages("Health-Veterinary-Chat")
+            }
+            22 -> {
+                getChatMessages("Health-Dietetics-Chat")
+            }
+            23 -> {
+                getChatMessages("Health-Rehabilitation-Chat")
+            }
+
         }
 
         binding.sendButton.setOnClickListener {
@@ -169,6 +194,30 @@ class ChatFragment : Fragment() {
                     }
                     15 -> {
                         sendMessage("Teacher-History-Chat", dataMap)
+                    }
+                    16 -> {
+                        sendMessage("Health-Medicine-Chat", dataMap)
+                    }
+                    17 -> {
+                        sendMessage("Health-Dentist-Chat", dataMap)
+                    }
+                    18 -> {
+                        sendMessage("Health-Nurse-Chat", dataMap)
+                    }
+                    19 -> {
+                        sendMessage("Health-Psychology-Chat", dataMap)
+                    }
+                    20 -> {
+                        sendMessage("Health-Pharmacy-Chat", dataMap)
+                    }
+                    21 -> {
+                        sendMessage("Health-Veterinary-Chat", dataMap)
+                    }
+                    22 -> {
+                        sendMessage("Health-Dietetics-Chat", dataMap)
+                    }
+                    23 -> {
+                        sendMessage("Health-Rehabilitation-Chat", dataMap)
                     }
                 }
             }

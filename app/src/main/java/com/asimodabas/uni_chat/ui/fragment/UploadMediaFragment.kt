@@ -113,6 +113,30 @@ class UploadMediaFragment : Fragment() {
                 15 -> {
                     upload("Teacher-History-Media")
                 }
+                16 -> {
+                    upload("Health-Medicine-Media")
+                }
+                17 -> {
+                    upload("Health-Dentist-Media")
+                }
+                18 -> {
+                    upload("Health-Nurse-Media")
+                }
+                19 -> {
+                    upload("Health-Psychology-Media")
+                }
+                20 -> {
+                    upload("Health-Pharmacy-Media")
+                }
+                21 -> {
+                    upload("Health-Veterinary-Media")
+                }
+                22 -> {
+                    upload("Health-Dietetics-Media")
+                }
+                23 -> {
+                    upload("Health-Rehabilitation-Media")
+                }
             }
         }
     }

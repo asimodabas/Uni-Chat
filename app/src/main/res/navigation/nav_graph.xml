@@ -105,5 +105,12 @@
         android:id="@+id/healthFragment"
         android:name="com.asimodabas.uni_chat.ui.fragment.HealthFragment"
         android:label="fragment_health"
-        tools:layout="@layout/fragment_health" />
+        tools:layout="@layout/fragment_health" >
+        <action
+            android:id="@+id/action_healthFragment_to_mediaChatFragment"
+            app:destination="@id/mediaChatFragment" />
+        <action
+            android:id="@+id/action_healthFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
 </navigation>

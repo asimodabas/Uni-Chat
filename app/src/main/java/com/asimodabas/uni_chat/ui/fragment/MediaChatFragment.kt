@@ -106,6 +106,30 @@ class MediaChatFragment : Fragment() {
             15 -> {
                 getData("Teacher-History-Media")
             }
+            16 -> {
+                getData("Health-Medicine-Media")
+            }
+            17 -> {
+                getData("Health-Dentist-Media")
+            }
+            18 -> {
+                getData("Health-Nurse-Media")
+            }
+            19 -> {
+                getData("Health-Psychology-Media")
+            }
+            20 -> {
+                getData("Health-Pharmacy-Media")
+            }
+            21 -> {
+                getData("Health-Veterinary-Media")
+            }
+            22 -> {
+                getData("Health-Dietetics-Media")
+            }
+            23 -> {
+                getData("Health-Rehabilitation-Media")
+            }
         }
 
         binding.floatingActionButton.setOnClickListener {
