@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -69,7 +68,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/medicineImageView"
-                        app:layout_constraintTop_toBottomOf="@+id/medicineMediaButton"/>
+                        app:layout_constraintTop_toBottomOf="@+id/medicineMediaButton" />
 
                     <TextView
                         android:id="@+id/medicineTextView"
@@ -96,27 +95,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
-                        android:background="@drawable/edittext_background"
+                    android:background="@drawable/edittext_background"
                     android:backgroundTint="@color/yellow"
                     app:layout_constraintBottom_toBottomOf="@+id/dentistMessageButton"
                     app:layout_constraintTop_toBottomOf="@+id/dentistMessageButton">
 
-                <TextView
-                    android:id="@+id/dentistTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    <TextView
+                        android:id="@+id/dentistTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                    android:text="Diş Hekimliği"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/dentistImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
+                        android:text="Diş Hekimliği"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/dentistImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/dentistMessageButton"
-                           android:layout_width="85dp"
+                        android:layout_width="85dp"
                         android:layout_height="37dp"
                         android:backgroundTint="#4E3C3C"
                         android:text="Mesaj"
@@ -124,11 +123,11 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/dentistImageView"
-                        app:layout_constraintTop_toBottomOf="@+id/dentistMediaButton"/>
+                        app:layout_constraintTop_toBottomOf="@+id/dentistMediaButton" />
 
                     <Button
                         android:id="@+id/dentistMediaButton"
-                            android:layout_width="85dp"
+                        android:layout_width="85dp"
                         android:layout_height="37dp"
                         android:backgroundTint="#4E3C3C"
                         android:text="Medya"
@@ -136,7 +135,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/dentistImageView"
-                          app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
                     <ImageView
@@ -144,7 +143,7 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                         app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:src="@tools:sample/avatars" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -164,23 +163,21 @@
                     app:layout_constraintBottom_toBottomOf="@+id/nurseMessageButton"
                     app:layout_constraintTop_toBottomOf="@+id/nurseMessageButton">
 
-
-
-                <Button
+                    <Button
                         android:id="@+id/nurseMediaButton"
-                    android:layout_width="85dp"
-                    android:layout_height="37dp"
-                    android:backgroundTint="#4E3C3C"
-                    android:text="Medya"
-                    app:layout_constraintBottom_toTopOf="@+id/nurseMessageButton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                       app:layout_constraintStart_toStartOf="@+id/nurseImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Medya"
+                        app:layout_constraintBottom_toTopOf="@+id/nurseMessageButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/nurseImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/nurseMessageButton"
-                         android:layout_width="85dp"
+                        android:layout_width="85dp"
                         android:layout_height="37dp"
                         android:backgroundTint="#4E3C3C"
                         android:text="Mesaj"
@@ -188,15 +185,14 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/nurseImageView"
-                        app:layout_constraintTop_toBottomOf="@+id/nurseMediaButton"/>
-
+                        app:layout_constraintTop_toBottomOf="@+id/nurseMediaButton" />
 
                     <ImageView
                         android:id="@+id/nurseImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         app:layout_constraintBottom_toBottomOf="parent"
-                           app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         tools:src="@tools:sample/avatars" />
 
@@ -205,7 +201,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                         android:text="Hemşirelik"
+                        android:text="Hemşirelik"
                         android:textColor="#000000"
                         android:textSize="15sp"
                         android:textStyle="bold"
@@ -231,14 +227,14 @@
                     app:layout_constraintTop_toBottomOf="@+id/psychologyMessageButton">
 
                     <TextView
-                             android:id="@+id/psychologyTextView"
+                        android:id="@+id/psychologyTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
                         android:text="Psikoloji"
-                         android:textColor="#000000"
+                        android:textColor="#000000"
                         android:textSize="15sp"
-                             android:textStyle="bold"
+                        android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/psychologyImageView"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -248,25 +244,24 @@
                         android:layout_width="85dp"
                         android:layout_height="37dp"
                         android:backgroundTint="#4E3C3C"
-                            android:text="Mesaj"
+                        android:text="Mesaj"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/psychologyImageView"
-                        app:layout_constraintTop_toBottomOf="@+id/psychologyMediaButton"/>
-
+                        app:layout_constraintTop_toBottomOf="@+id/psychologyMediaButton" />
 
                     <Button
                         android:id="@+id/psychologyMediaButton"
                         android:layout_width="85dp"
                         android:layout_height="37dp"
                         android:backgroundTint="#4E3C3C"
-                           android:text="Medya"
+                        android:text="Medya"
                         app:layout_constraintBottom_toTopOf="@+id/psychologyMessageButton"
                         app:layout_constraintEnd_toEndOf="parent"
-                               app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/psychologyImageView"
-                                 app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/psychologyImageView"
@@ -294,19 +289,18 @@
                     app:layout_constraintBottom_toBottomOf="@+id/pharmacyMessageButton"
                     app:layout_constraintTop_toBottomOf="@+id/pharmacyMessageButton">
 
-
-                <TextView
+                    <TextView
                         android:id="@+id/pharmacyTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Eczacılık"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/pharmacyImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Eczacılık"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/pharmacyImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/pharmacyMessageButton"
@@ -318,8 +312,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/pharmacyImageView"
-                        app:layout_constraintTop_toBottomOf="@+id/pharmacyMediaButton"/>
-
+                        app:layout_constraintTop_toBottomOf="@+id/pharmacyMediaButton" />
 
                     <Button
                         android:id="@+id/pharmacyMediaButton"
@@ -332,7 +325,6 @@
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/pharmacyImageView"
                         app:layout_constraintTop_toTopOf="parent" />
-
 
                     <ImageView
                         android:id="@+id/pharmacyImageView"
@@ -359,18 +351,17 @@
                     app:layout_constraintBottom_toBottomOf="@+id/pharmacyMessageButton"
                     app:layout_constraintTop_toBottomOf="@+id/pharmacyMessageButton">
 
-                <Button
+                    <Button
                         android:id="@+id/veterinaryMessageButton"
-                    android:layout_width="85dp"
-                    android:layout_height="37dp"
-                    android:backgroundTint="#4E3C3C"
-                    android:text="Mesaj"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/veterinaryImageView"
-                    app:layout_constraintTop_toBottomOf="@+id/veterinaryMediaButton"/>
-
+                        android:layout_width="85dp"
+                        android:layout_height="37dp"
+                        android:backgroundTint="#4E3C3C"
+                        android:text="Mesaj"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/veterinaryImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/veterinaryMediaButton" />
 
                     <TextView
                         android:id="@+id/veterinaryTextView"
@@ -397,7 +388,6 @@
                         app:layout_constraintStart_toStartOf="@+id/veterinaryImageView"
                         app:layout_constraintTop_toTopOf="parent" />
 
-
                     <ImageView
                         android:id="@+id/veterinaryImageView"
                         android:layout_width="75dp"
@@ -423,18 +413,18 @@
                     app:layout_constraintBottom_toBottomOf="@+id/dieteticsMessageButton"
                     app:layout_constraintTop_toBottomOf="@+id/dieteticsMessageButton">
 
-                <TextView
+                    <TextView
                         android:id="@+id/dieteticsTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Beslenme ve Diyetik"
-                    android:textColor="#000000"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/dieteticsImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Beslenme ve Diyetik"
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/dieteticsImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/dieteticsMessageButton"
@@ -448,7 +438,6 @@
                         app:layout_constraintStart_toStartOf="@+id/dieteticsImageView"
                         app:layout_constraintTop_toBottomOf="@+id/dieteticsMediaButton" />
 
-
                     <Button
                         android:id="@+id/dieteticsMediaButton"
                         android:layout_width="85dp"
@@ -460,7 +449,6 @@
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/dieteticsImageView"
                         app:layout_constraintTop_toTopOf="parent" />
-
 
                     <ImageView
                         android:id="@+id/dieteticsImageView"
@@ -486,7 +474,6 @@
                     android:backgroundTint="@color/yellow"
                     app:layout_constraintBottom_toBottomOf="@+id/nurseMessageButton"
                     app:layout_constraintTop_toBottomOf="@+id/nurseMessageButton">
-
 
                     <ImageView
                         android:id="@+id/rehabilitationImageView"
@@ -538,6 +525,5 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 </LinearLayout>

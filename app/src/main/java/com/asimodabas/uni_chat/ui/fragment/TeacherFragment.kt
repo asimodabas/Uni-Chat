@@ -40,7 +40,7 @@ class TeacherFragment : Fragment() {
 
         binding.physicsMessageButton.setOnClickListener {
             val action =
-               TeacherFragmentDirections.actionTeacherFragmentToChatFragment(
+                TeacherFragmentDirections.actionTeacherFragmentToChatFragment(
                     8
                 )
             findNavController().navigate(action)
@@ -112,7 +112,7 @@ class TeacherFragment : Fragment() {
 //English
         binding.englishMediaButton.setOnClickListener {
             val action =
-               TeacherFragmentDirections.actionTeacherFragmentToMediaChatFragment(
+                TeacherFragmentDirections.actionTeacherFragmentToMediaChatFragment(
                     13
                 )
             findNavController().navigate(action)
@@ -128,7 +128,7 @@ class TeacherFragment : Fragment() {
 //Geography
         binding.geographyMediaButton.setOnClickListener {
             val action =
-               TeacherFragmentDirections.actionTeacherFragmentToMediaChatFragment(
+                TeacherFragmentDirections.actionTeacherFragmentToMediaChatFragment(
                     14
                 )
             findNavController().navigate(action)
@@ -136,7 +136,7 @@ class TeacherFragment : Fragment() {
 
         binding.geographyMessageButton.setOnClickListener {
             val action =
-               TeacherFragmentDirections.actionTeacherFragmentToChatFragment(
+                TeacherFragmentDirections.actionTeacherFragmentToChatFragment(
                     14
                 )
             findNavController().navigate(action)
