@@ -40,7 +40,7 @@
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
         android:text="Genel"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintBottom_toTopOf="@+id/languageButton"
         app:layout_constraintEnd_toStartOf="@+id/teacherButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/engineerButton"
@@ -53,17 +53,17 @@
         android:backgroundTint="@color/black"
         android:text="sağlık"
         app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        app:layout_constraintEnd_toStartOf="@+id/languageButton"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/engineerButton" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/languageButton"
         android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/black"
-        android:text="Button"
+        android:text="Dil"
         app:layout_constraintBottom_toTopOf="@+id/button11"
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintHorizontal_bias="0.5"
@@ -79,7 +79,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button8"
+        app:layout_constraintStart_toEndOf="@+id/languageButton"
         app:layout_constraintTop_toBottomOf="@+id/teacherButton" />
 
     <Button
@@ -104,7 +104,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button12"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintTop_toBottomOf="@+id/languageButton" />
 
     <Button
         android:id="@+id/button12"

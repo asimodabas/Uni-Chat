@@ -52,6 +52,9 @@
         <action
             android:id="@+id/action_secondFragment_to_healthFragment"
             app:destination="@id/healthFragment" />
+        <action
+            android:id="@+id/action_secondFragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
     </fragment>
     <fragment
         android:id="@+id/engineerFragment"
@@ -111,6 +114,18 @@
             app:destination="@id/mediaChatFragment" />
         <action
             android:id="@+id/action_healthFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.asimodabas.uni_chat.ui.fragment.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" >
+        <action
+            android:id="@+id/action_languageFragment_to_mediaChatFragment"
+            app:destination="@id/mediaChatFragment" />
+        <action
+            android:id="@+id/action_languageFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
     </fragment>
 </navigation>

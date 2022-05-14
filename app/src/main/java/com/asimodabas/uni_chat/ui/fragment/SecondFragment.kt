@@ -55,6 +55,12 @@ class SecondFragment : Fragment() {
                 SecondFragmentDirections.actionSecondFragmentToHealthFragment()
             findNavController().navigate(action)
         }
+
+        binding.languageButton.setOnClickListener {
+            val action =
+                SecondFragmentDirections.actionSecondFragmentToLanguageFragment()
+            findNavController().navigate(action)
+        }
     }
 
     override fun onDestroyView() {
