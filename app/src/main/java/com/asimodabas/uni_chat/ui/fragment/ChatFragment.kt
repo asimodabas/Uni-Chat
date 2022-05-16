@@ -104,6 +104,7 @@ class ChatFragment : Fragment() {
             15 -> {
                 getChatMessages("Teacher-History-Chat")
             }
+            //Health
             16 -> {
                 getChatMessages("Health-Medicine-Chat")
             }
@@ -128,7 +129,22 @@ class ChatFragment : Fragment() {
             23 -> {
                 getChatMessages("Health-Rehabilitation-Chat")
             }
-
+            //Language
+            24 -> {
+                getChatMessages("Language-English-Chat")
+            }
+            25 -> {
+                getChatMessages("Language-Deutsch-Chat")
+            }
+            26 -> {
+                getChatMessages("Language-French-Chat")
+            }
+            27 -> {
+                getChatMessages("Language-Russian-Chat")
+            }
+            28 -> {
+                getChatMessages("Language-Japanese-Chat")
+            }
         }
 
         binding.sendButton.setOnClickListener {
@@ -195,6 +211,7 @@ class ChatFragment : Fragment() {
                     15 -> {
                         sendMessage("Teacher-History-Chat", dataMap)
                     }
+                    //Health
                     16 -> {
                         sendMessage("Health-Medicine-Chat", dataMap)
                     }
@@ -218,6 +235,22 @@ class ChatFragment : Fragment() {
                     }
                     23 -> {
                         sendMessage("Health-Rehabilitation-Chat", dataMap)
+                    }
+                    //Language
+                    24 -> {
+                        sendMessage("Language-English-Chat", dataMap)
+                    }
+                    25 -> {
+                        sendMessage("Language-Deutsch-Chat", dataMap)
+                    }
+                    26 -> {
+                        sendMessage("Language-French-Chat", dataMap)
+                    }
+                    27 -> {
+                        sendMessage("Language-Russian-Chat", dataMap)
+                    }
+                    28 -> {
+                        sendMessage("Language-Japanese-Chat", dataMap)
                     }
                 }
             }

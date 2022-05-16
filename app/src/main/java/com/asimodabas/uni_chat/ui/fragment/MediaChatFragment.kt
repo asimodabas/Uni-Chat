@@ -106,6 +106,7 @@ class MediaChatFragment : Fragment() {
             15 -> {
                 getData("Teacher-History-Media")
             }
+            //Health
             16 -> {
                 getData("Health-Medicine-Media")
             }
@@ -129,6 +130,22 @@ class MediaChatFragment : Fragment() {
             }
             23 -> {
                 getData("Health-Rehabilitation-Media")
+            }
+            //Language
+            24 -> {
+                getData("Language-English-Media")
+            }
+            25 -> {
+                getData("Language-Deutsch-Media")
+            }
+            26 -> {
+                getData("Language-French-Media")
+            }
+            27 -> {
+                getData("Language-Russian-Media")
+            }
+            28 -> {
+                getData("Language-Japanese-Media")
             }
         }
 

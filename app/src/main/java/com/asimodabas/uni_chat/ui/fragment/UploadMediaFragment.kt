@@ -113,6 +113,7 @@ class UploadMediaFragment : Fragment() {
                 15 -> {
                     upload("Teacher-History-Media")
                 }
+                //Health
                 16 -> {
                     upload("Health-Medicine-Media")
                 }
@@ -136,6 +137,22 @@ class UploadMediaFragment : Fragment() {
                 }
                 23 -> {
                     upload("Health-Rehabilitation-Media")
+                }
+                //Language
+                24 -> {
+                    upload("Language-English-Media")
+                }
+                25 -> {
+                    upload("Language-Deutsch-Media")
+                }
+                26 -> {
+                    upload("Language-French-Media")
+                }
+                27 -> {
+                    upload("Language-Russian-Media")
+                }
+                28 -> {
+                    upload("Language-Japanese-Media")
                 }
             }
         }

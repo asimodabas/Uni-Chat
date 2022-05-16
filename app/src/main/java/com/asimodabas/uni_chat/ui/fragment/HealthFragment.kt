@@ -139,8 +139,6 @@ class HealthFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-
-
     }
 
 
