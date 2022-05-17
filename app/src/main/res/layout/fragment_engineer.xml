@@ -78,7 +78,7 @@
                         android:id="@+id/computerImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/computerengineer"
+                        android:src="@drawable/engineer_computer"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -101,7 +101,7 @@
                         android:id="@+id/industryImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/industryengineer"
+                        android:src="@drawable/engineer_industry"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -161,7 +161,7 @@
                         android:id="@+id/buildImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/buildengineer"
+                        android:src="@drawable/engineer_build"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -221,7 +221,7 @@
                         android:id="@+id/chemicalImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/chemicalengineer"
+                        android:src="@drawable/engineer_chemical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -280,7 +280,7 @@
                         android:id="@+id/electricImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/electricengineer"
+                        android:src="@drawable/engineer_electric"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -339,7 +339,7 @@
                         android:id="@+id/foodImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/foodengineer"
+                        android:src="@drawable/engineer_food"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -399,7 +399,7 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_marginTop="16dp"
-                        android:src="@drawable/machineengineer"
+                        android:src="@drawable/engineer_machine"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />

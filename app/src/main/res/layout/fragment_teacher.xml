@@ -54,7 +54,7 @@
                         android:id="@+id/physicsImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/physicsteacher"
+                        android:src="@drawable/teacher_physics"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -138,7 +138,7 @@
                         android:id="@+id/literatureImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/literatureteacher"
+                        android:src="@drawable/teacher_literature"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -174,7 +174,7 @@
                         android:id="@+id/chemicalTeacherImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/chemicalteacher"
+                        android:src="@drawable/teacher_chemical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -258,7 +258,7 @@
                         android:id="@+id/mathsImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/mathsteacher"
+                        android:src="@drawable/teacher_maths"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -317,7 +317,7 @@
                         android:id="@+id/biologyImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/biologyteacher"
+                        android:src="@drawable/teacher_biology"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -377,7 +377,7 @@
                         android:id="@+id/englishImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/englishteacher"
+                        android:src="@drawable/teacher_english"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -413,7 +413,7 @@
                         android:id="@+id/geographyImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/geographyteacher"
+                        android:src="@drawable/teacher_geography"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -496,7 +496,7 @@
                         android:id="@+id/historyImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
-                        android:src="@drawable/historyteacher"
+                        android:src="@drawable/teacher_history"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
