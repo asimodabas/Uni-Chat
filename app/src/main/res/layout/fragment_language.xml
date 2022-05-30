@@ -55,10 +55,10 @@
                         android:id="@+id/languageEnglishImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/language_english"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/language_english" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/languageEnglishMessageButton"
@@ -70,7 +70,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/languageEnglishImageView"
-                        app:layout_constraintTop_toBottomOf="@+id/languageEnglishMediaButton"/>
+                        app:layout_constraintTop_toBottomOf="@+id/languageEnglishMediaButton" />
 
 
                     <Button
@@ -102,26 +102,26 @@
                     app:layout_constraintBottom_toBottomOf="@+id/deutschMessageButton"
                     app:layout_constraintTop_toBottomOf="@+id/deutschMessageButton">
 
-                <TextView
+                    <TextView
                         android:id="@+id/deutschTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Almanca"
-                    android:textColor="#000000"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/deutschImageView"
-                    app:layout_constraintTop_toTopOf="parent" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Almanca"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/deutschImageView"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/deutschImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/language_deutsch"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/language_deutsch" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/deutschMediaButton"
@@ -157,11 +157,11 @@
                 android:layout_height="125dp"
                 android:layout_marginTop="16dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/edittext_background"
-                android:backgroundTint="@color/yellow">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/edittext_background"
+                    android:backgroundTint="@color/yellow">
 
                     <Button
                         android:id="@+id/frenchMediaButton"
@@ -175,7 +175,7 @@
                         app:layout_constraintStart_toStartOf="@+id/frenchImageView"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                <Button
+                    <Button
                         android:id="@+id/frenchMessageButton"
                         android:layout_width="85dp"
                         android:layout_height="37dp"
@@ -188,7 +188,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/frenchMediaButton" />
 
 
-                <TextView
+                    <TextView
                         android:id="@+id/frenchTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -201,14 +201,14 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
 
-                <ImageView
+                    <ImageView
                         android:id="@+id/frenchImageView"
-                    android:layout_width="75dp"
-                    android:layout_height="75dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/language_french" />
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/language_french"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -235,7 +235,6 @@
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="@+id/russianImageView"
                         app:layout_constraintTop_toTopOf="parent" />
-
 
 
                     <Button
@@ -268,10 +267,10 @@
                         android:id="@+id/russianImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/language_russian"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/language_russian" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -291,10 +290,10 @@
                         android:id="@+id/japaneseImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/language_japanese"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/language_japanese" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/japaneseTextView"

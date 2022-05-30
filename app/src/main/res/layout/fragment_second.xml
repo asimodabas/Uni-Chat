@@ -14,107 +14,86 @@
         android:id="@+id/teacherButton"
         android:layout_width="120dp"
         android:layout_height="48dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/yellow"
         android:text="Öğretmen"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/PublicButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <Button
         android:id="@+id/engineerButton"
         android:layout_width="120dp"
         android:layout_height="48dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/yellow"
         android:text="Mühendis"
-        app:layout_constraintBottom_toTopOf="@+id/healthButton"
-        app:layout_constraintEnd_toStartOf="@+id/PublicButton"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <Button
         android:id="@+id/PublicButton"
         android:layout_width="120dp"
         android:layout_height="48dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/yellow"
         android:text="Genel"
-        app:layout_constraintBottom_toTopOf="@+id/languageButton"
-        app:layout_constraintEnd_toStartOf="@+id/teacherButton"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/healthButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/engineerButton"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/healthButton"
         android:layout_width="120dp"
         android:layout_height="48dp"
-        android:backgroundTint="@color/black"
+        android:layout_marginTop="258dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/yellow"
         android:text="sağlık"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
-        app:layout_constraintEnd_toStartOf="@+id/languageButton"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/engineerButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/languageButton"
         android:layout_width="120dp"
         android:layout_height="48dp"
-        android:backgroundTint="@color/black"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="125dp"
+        android:backgroundTint="@color/yellow"
         android:text="Dil"
-        app:layout_constraintBottom_toTopOf="@+id/button11"
-        app:layout_constraintEnd_toStartOf="@+id/button9"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/healthButton"
-        app:layout_constraintTop_toBottomOf="@+id/PublicButton" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/black"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/button12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/languageButton"
-        app:layout_constraintTop_toBottomOf="@+id/teacherButton" />
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/black"
-        android:text="Button"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button11"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/second_drawable_background"
+        android:src="@drawable/add_logo"
+        app:layout_constraintBottom_toTopOf="@+id/languageButton"
+        app:layout_constraintEnd_toStartOf="@+id/teacherButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/engineerButton"
         app:layout_constraintTop_toBottomOf="@+id/healthButton" />
 
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/black"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toBottomOf="@+id/languageButton" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/black"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
 </androidx.constraintlayout.widget.ConstraintLayout>

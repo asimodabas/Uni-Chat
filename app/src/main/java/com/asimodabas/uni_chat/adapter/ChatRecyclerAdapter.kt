@@ -63,8 +63,6 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
             return ChatHolder(view)
 
         }
-
-
     }
 
     override fun onBindViewHolder(holder: ChatHolder, position: Int) {

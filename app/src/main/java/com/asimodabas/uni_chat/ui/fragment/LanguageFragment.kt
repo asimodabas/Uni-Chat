@@ -32,7 +32,7 @@ class LanguageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //English
+//English
         binding.languageEnglishMediaButton.setOnClickListener {
             val action =
                 LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(24)
@@ -44,7 +44,7 @@ class LanguageFragment : Fragment() {
                 LanguageFragmentDirections.actionLanguageFragmentToChatFragment(24)
             findNavController().navigate(action)
         }
-        //Deutsch
+//Deutsch
         binding.deutschMediaButton.setOnClickListener {
             val action =
                 LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(25)
@@ -56,7 +56,7 @@ class LanguageFragment : Fragment() {
                 LanguageFragmentDirections.actionLanguageFragmentToChatFragment(25)
             findNavController().navigate(action)
         }
-        //French
+//French
         binding.frenchMediaButton.setOnClickListener {
             val action =
                 LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(26)
@@ -68,7 +68,7 @@ class LanguageFragment : Fragment() {
                 LanguageFragmentDirections.actionLanguageFragmentToChatFragment(26)
             findNavController().navigate(action)
         }
-        //Russian
+//Russian
         binding.russianMediaButton.setOnClickListener {
             val action =
                 LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(27)
@@ -80,7 +80,7 @@ class LanguageFragment : Fragment() {
                 LanguageFragmentDirections.actionLanguageFragmentToChatFragment(27)
             findNavController().navigate(action)
         }
-        //Japanese
+//Japanese
         binding.japaneseMediaButton.setOnClickListener {
             val action =
                 LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(28)

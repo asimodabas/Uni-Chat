@@ -9,20 +9,21 @@
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/drawable/media_message_background.xml" value="0.2855" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/drawable/message_background.xml" value="0.22" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/drawable/message_background_right.xml" value="0.22" />
+        <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/drawable/second_drawable_background.xml" value="0.1425" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/drawable/send_button_background.xml" value="0.302" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/drawable/send_message_background.xml" value="0.25" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/card_design.xml" value="0.5" />
-        <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_chat.xml" value="0.5" />
+        <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_chat.xml" value="0.33" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_computer_message.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_create.xml" value="0.33" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_engineer.xml" value="0.5" />
-        <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_health.xml" value="0.5" />
+        <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_health.xml" value="0.33" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_language.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_media.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_media_chat.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_second.xml" value="0.33" />
+        <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_second.xml" value="0.5" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_teacher.xml" value="0.4821917808219178" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_update_media.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/WindoWss/Uni-Chat/app/src/main/res/layout/fragment_upload_media.xml" value="0.36666666666666664" />

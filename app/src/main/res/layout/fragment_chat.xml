@@ -6,15 +6,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C5C3BF"
+    android:background="#E3DDDD"
     tools:context=".ui.fragment.ChatFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="#E3DDDD"
         android:layout_marginBottom="5dp"
-        android:background="#C5C3BF"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/chatText"
         app:layout_constraintEnd_toEndOf="parent"

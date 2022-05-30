@@ -6,6 +6,10 @@
     <stroke
         android:width="3dp"
         android:color="#FDBE00" />
+    <gradient
+        android:centerColor="@color/white"
+        android:endColor="@color/white"
+        android:startColor="@color/white" />
 
     <corners android:radius="15dp" />
 
