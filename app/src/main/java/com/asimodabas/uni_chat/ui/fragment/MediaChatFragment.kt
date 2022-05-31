@@ -1,14 +1,13 @@
 package com.asimodabas.uni_chat.ui.fragment
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.adapter.MediaRecyclerAdapter
 import com.asimodabas.uni_chat.databinding.FragmentMediaChatBinding
 import com.asimodabas.uni_chat.model.UniMedia
@@ -34,6 +33,8 @@ class MediaChatFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setHasOptionsMenu(true)
 
         auth = Firebase.auth
         firestore = Firebase.firestore
@@ -193,6 +194,28 @@ class MediaChatFragment : Fragment() {
                 }
             }
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+
+        inflater.inflate(R.menu.lagout_menu, menu)
+
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if (item.itemId == R.id.signout) {
+            auth.signOut()
+
+            val action =
+                MediaChatFragmentDirections.actionMediaChatFragmentToLoginFragment()
+            findNavController().navigate(action)
+
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

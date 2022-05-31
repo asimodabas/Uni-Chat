@@ -318,8 +318,9 @@ class ChatFragment : Fragment() {
         if (item.itemId == R.id.signout) {
             auth.signOut()
 
-            findNavController().popBackStack()
-            findNavController().navigateUp()
+            val action =
+                MediaChatFragmentDirections.actionMediaChatFragmentToLoginFragment()
+            findNavController().navigate(action)
 
         }
 

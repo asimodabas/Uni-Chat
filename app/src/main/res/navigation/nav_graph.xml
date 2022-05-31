@@ -25,6 +25,9 @@
         <argument
             android:name="chatType"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_chatFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/createFragment"
@@ -79,6 +82,9 @@
         <argument
             android:name="departmentId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_mediaChatFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/uploadMediaFragment"
