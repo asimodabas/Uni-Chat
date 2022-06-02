@@ -319,7 +319,7 @@ class ChatFragment : Fragment() {
             auth.signOut()
 
             val action =
-                MediaChatFragmentDirections.actionMediaChatFragmentToLoginFragment()
+                ChatFragmentDirections.actionChatFragmentToLoginFragment()
             findNavController().navigate(action)
 
         }
