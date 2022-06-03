@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat.ui.fragment
+package com.asimodabas.uni_chat.ui.fragment.login.forgot_password
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

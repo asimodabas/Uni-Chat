@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat.ui.fragment
+package com.asimodabas.uni_chat.ui.fragment.jobs
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -128,7 +128,7 @@ class TeacherFragment : Fragment() {
 //Geography
         binding.geographyMediaButton.setOnClickListener {
             val action =
-                TeacherFragmentDirections.actionTeacherFragmentToMediaChatFragment(
+               TeacherFragmentDirections.actionTeacherFragmentToMediaChatFragment(
                     14
                 )
             findNavController().navigate(action)

@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat.ui.fragment
+package com.asimodabas.uni_chat.ui.fragment.jobs
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.asimodabas.uni_chat.R
-import com.asimodabas.uni_chat.databinding.FragmentHealthBinding
 import com.asimodabas.uni_chat.databinding.FragmentLanguageBinding
 
 class LanguageFragment : Fragment() {
@@ -35,61 +33,81 @@ class LanguageFragment : Fragment() {
 //English
         binding.languageEnglishMediaButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(24)
+                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(
+                    24
+                )
             findNavController().navigate(action)
         }
 
         binding.languageEnglishMessageButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(24)
+                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(
+                    24
+                )
             findNavController().navigate(action)
         }
 //Deutsch
         binding.deutschMediaButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(25)
+                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(
+                    25
+                )
             findNavController().navigate(action)
         }
 
         binding.deutschMessageButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(25)
+                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(
+                    25
+                )
             findNavController().navigate(action)
         }
 //French
         binding.frenchMediaButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(26)
+                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(
+                    26
+                )
             findNavController().navigate(action)
         }
 
         binding.frenchMessageButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(26)
+                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(
+                    26
+                )
             findNavController().navigate(action)
         }
 //Russian
         binding.russianMediaButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(27)
+                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(
+                    27
+                )
             findNavController().navigate(action)
         }
 
         binding.russianMessageButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(27)
+                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(
+                    27
+                )
             findNavController().navigate(action)
         }
 //Japanese
         binding.japaneseMediaButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(28)
+                LanguageFragmentDirections.actionLanguageFragmentToMediaChatFragment(
+                    28
+                )
             findNavController().navigate(action)
         }
 
         binding.japaneseMessageButton.setOnClickListener {
             val action =
-                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(28)
+                LanguageFragmentDirections.actionLanguageFragmentToChatFragment(
+                    28
+                )
             findNavController().navigate(action)
         }
     }

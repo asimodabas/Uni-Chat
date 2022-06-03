@@ -12,7 +12,7 @@
     android:paddingEnd="5dp"
     android:paddingBottom="10dp"
     android:visibility="visible"
-    tools:context=".ui.fragment.HealthFragment">
+    tools:context=".ui.fragment.jobs.HealthFragment">
 
     <ScrollView
         android:layout_width="match_parent"

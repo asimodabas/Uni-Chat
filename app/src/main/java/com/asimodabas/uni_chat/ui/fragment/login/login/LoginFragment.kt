@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat.ui.fragment
+package com.asimodabas.uni_chat.ui.fragment.login.login
 
 import android.os.Bundle
 import android.text.TextUtils

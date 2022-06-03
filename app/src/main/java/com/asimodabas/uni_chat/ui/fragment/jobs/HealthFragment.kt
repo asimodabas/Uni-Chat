@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat.ui.fragment
+package com.asimodabas.uni_chat.ui.fragment.jobs
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.asimodabas.uni_chat.R
-import com.asimodabas.uni_chat.databinding.FragmentEngineerBinding
 import com.asimodabas.uni_chat.databinding.FragmentHealthBinding
 
 
@@ -36,67 +34,89 @@ class HealthFragment : Fragment() {
 //Medicine
         binding.medicineMediaButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(16)
+                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(
+                    16
+                )
             findNavController().navigate(action)
         }
 
         binding.medicineMessageButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToChatFragment(16)
+                HealthFragmentDirections.actionHealthFragmentToChatFragment(
+                    16
+                )
             findNavController().navigate(action)
         }
 //Dentist
         binding.dentistMediaButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(17)
+                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(
+                    17
+                )
             findNavController().navigate(action)
         }
 
         binding.dentistMessageButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToChatFragment(17)
+                HealthFragmentDirections.actionHealthFragmentToChatFragment(
+                    17
+                )
             findNavController().navigate(action)
         }
 //Nurse
         binding.nurseMediaButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(18)
+                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(
+                    18
+                )
             findNavController().navigate(action)
         }
 
         binding.nurseMessageButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToChatFragment(18)
+                HealthFragmentDirections.actionHealthFragmentToChatFragment(
+                    18
+                )
             findNavController().navigate(action)
         }
 //Psychology
         binding.psychologyMediaButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(19)
+                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(
+                    19
+                )
             findNavController().navigate(action)
         }
 
         binding.psychologyMessageButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToChatFragment(19)
+                HealthFragmentDirections.actionHealthFragmentToChatFragment(
+                    19
+                )
             findNavController().navigate(action)
         }
 //Pharmacy
         binding.pharmacyMediaButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(20)
+                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(
+                    20
+                )
             findNavController().navigate(action)
         }
 
         binding.pharmacyMessageButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToChatFragment(20)
+                HealthFragmentDirections.actionHealthFragmentToChatFragment(
+                    20
+                )
             findNavController().navigate(action)
         }
 //Veterinary
         binding.veterinaryMediaButton.setOnClickListener {
             val action =
-                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(21)
+                HealthFragmentDirections.actionHealthFragmentToMediaChatFragment(
+                    21
+                )
             findNavController().navigate(action)
         }
 

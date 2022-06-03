@@ -1,4 +1,4 @@
-package com.asimodabas.uni_chat.ui.fragment
+package com.asimodabas.uni_chat.ui.fragment.second
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
