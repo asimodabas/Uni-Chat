@@ -27,7 +27,6 @@ class CreateFragment : Fragment() {
 
         firestore = Firebase.firestore
         auth = Firebase.auth
-
     }
 
     override fun onCreateView(

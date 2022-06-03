@@ -28,7 +28,6 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
         override fun areContentsTheSame(oldItem: UniChat, newItem: UniChat): Boolean {
             return oldItem == newItem
         }
-
     }
 
     private val recyclerListDiffer = AsyncListDiffer(this, diffUtil)
@@ -45,7 +44,6 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
         } else {
             return VİEW_TYPE_MESSAGE_RECEIVED
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatHolder {
@@ -61,7 +59,6 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
                 LayoutInflater.from(parent.context)
                     .inflate(R.layout.recycler_row_chat_right, parent, false)
             return ChatHolder(view)
-
         }
     }
 

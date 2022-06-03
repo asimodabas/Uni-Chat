@@ -35,7 +35,6 @@ class ChatFragment : Fragment() {
 
         auth = Firebase.auth
         firestore = Firebase.firestore
-
     }
 
     override fun onCreateView(

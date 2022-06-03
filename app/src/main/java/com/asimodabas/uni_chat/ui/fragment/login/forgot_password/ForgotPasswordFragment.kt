@@ -47,7 +47,6 @@ class ForgotPasswordFragment : Fragment() {
         }
     }
 
-
     private fun observeData() {
         viewModel.animation.observe(viewLifecycleOwner) { animation ->
             animation?.let {

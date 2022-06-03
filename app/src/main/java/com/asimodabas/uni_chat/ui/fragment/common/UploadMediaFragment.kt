@@ -45,7 +45,6 @@ class UploadMediaFragment : Fragment() {
         auth = Firebase.auth
         firestore = Firebase.firestore
         storage = Firebase.storage
-
     }
 
     override fun onCreateView(
@@ -229,7 +228,6 @@ class UploadMediaFragment : Fragment() {
             }
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -251,7 +249,6 @@ class UploadMediaFragment : Fragment() {
                     }
                 }
             }
-
         } catch (e: Exception) {
             e.printStackTrace()
         }

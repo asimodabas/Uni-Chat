@@ -29,5 +29,4 @@ class ForgotPasswordViewModel : ViewModel() {
             errorMessage.value = error.localizedMessage
         }
     }
-
 }

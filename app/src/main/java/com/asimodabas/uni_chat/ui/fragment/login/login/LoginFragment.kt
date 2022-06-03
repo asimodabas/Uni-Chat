@@ -31,7 +31,6 @@ class LoginFragment : Fragment() {
                 LoginFragmentDirections.actionLoginFragmentToSecondFragment()
             findNavController().navigate(action)
         }
-
     }
 
     override fun onCreateView(
@@ -76,10 +75,8 @@ class LoginFragment : Fragment() {
 
                 }.addOnFailureListener {
                     Toast.makeText(requireContext(), it.localizedMessage, Toast.LENGTH_LONG).show()
-
                 }
             }
-
         }
 
         binding.textViewForgetPassword.setOnClickListener {
@@ -96,12 +93,10 @@ class LoginFragment : Fragment() {
             findNavController().navigate(action)
 
         }
-
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 }

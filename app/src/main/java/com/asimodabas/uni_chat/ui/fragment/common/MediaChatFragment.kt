@@ -188,7 +188,6 @@ class MediaChatFragment : Fragment() {
 
                             mediaAdapter.medias = mediaArrayList
                             mediaAdapter.notifyDataSetChanged()
-
                         }
                     }
                 }
@@ -212,7 +211,6 @@ class MediaChatFragment : Fragment() {
             findNavController().navigate(action)
 
         }
-
         return super.onOptionsItemSelected(item)
     }
 
@@ -221,5 +219,4 @@ class MediaChatFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }
