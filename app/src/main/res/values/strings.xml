@@ -2,4 +2,7 @@
     <string name="app_name">Uni-Chat</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="please_enter_your_email_adress">Lütfen E-Mail Adresinizi Girin!</string>
+    <string name="confirmation_email_sent">Onay Maili Gönderildi.</string>
+
 </resources>

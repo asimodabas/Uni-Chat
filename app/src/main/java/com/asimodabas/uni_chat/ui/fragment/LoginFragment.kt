@@ -81,6 +81,14 @@ class LoginFragment : Fragment() {
             }
 
         }
+
+        binding.textViewForgetPassword.setOnClickListener {
+
+            val action =
+                LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment()
+            findNavController().navigate(action)
+        }
+
         binding.signupButton.setOnClickListener {
 
             val action =
