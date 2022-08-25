@@ -275,7 +275,10 @@ class ChatFragment : Fragment() {
                 } else {
                     if (value != null) {
                         if (value.isEmpty) {
-                            Toast.makeText(requireContext(), "Mesaj Yok", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireContext(), R.string.no_message,
+                                Toast.LENGTH_SHORT
+                            ).show()
                         } else {
 
                             // Data pulled from firebase database
@@ -320,9 +323,7 @@ class ChatFragment : Fragment() {
             val action =
                 ChatFragmentDirections.actionChatFragmentToLoginFragment()
             findNavController().navigate(action)
-
         }
-
         return super.onOptionsItemSelected(item)
     }
 
@@ -330,6 +331,4 @@ class ChatFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }

@@ -24,15 +24,11 @@ class MediaRecyclerAdapter : RecyclerView.Adapter<MediaRecyclerAdapter.MediaHold
 
     private val diffUtil = object : DiffUtil.ItemCallback<UniMedia>() {
         override fun areItemsTheSame(oldItem: UniMedia, newItem: UniMedia): Boolean {
-
             return oldItem == newItem
-
         }
 
         override fun areContentsTheSame(oldItem: UniMedia, newItem: UniMedia): Boolean {
-
             return oldItem == newItem
-
         }
     }
 
@@ -54,8 +50,6 @@ class MediaRecyclerAdapter : RecyclerView.Adapter<MediaRecyclerAdapter.MediaHold
                 .inflate(R.layout.recycler_row_media_right, parent, false)
             return MediaHolder(view)
         }
-
-
     }
 
     override fun onBindViewHolder(holder: MediaHolder, position: Int) {
@@ -65,7 +59,6 @@ class MediaRecyclerAdapter : RecyclerView.Adapter<MediaRecyclerAdapter.MediaHold
 
         val imageView = holder.itemView.findViewById<ImageView>(R.id.mediaImageView)
         Picasso.get().load(medias.get(position).downloadUrl).into(imageView)
-
     }
 
     override fun getItemViewType(position: Int): Int {
@@ -85,5 +78,4 @@ class MediaRecyclerAdapter : RecyclerView.Adapter<MediaRecyclerAdapter.MediaHold
 
         return medias.size
     }
-
 }

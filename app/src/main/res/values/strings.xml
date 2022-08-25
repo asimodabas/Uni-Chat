@@ -4,5 +4,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="please_enter_your_email_adress">Lütfen E-Mail Adresinizi Girin!</string>
     <string name="confirmation_email_sent">Onay Maili Gönderildi.</string>
+    <string name="no_message">Mesaj Yok</string>
+    <string name="successful_sharing">Paylaşım Başarılı</string>
+    <string name="enter_your_information_completely">Lütfen Uni-Chate kaydolmak için bilgilerinizi eksiksiz giriniz</string>
+    <string name="Please_enter_valid_email_address">Lütfen geçerli bir mail adresi giriniz</string>
 
 </resources>

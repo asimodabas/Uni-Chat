@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -60,7 +61,7 @@ class LoginFragment : Fragment() {
             if (email.equals("") || password.equals("")) {
                 Toast.makeText(
                     context,
-                    "Lütfen Uni-Chat'e giriş yapmak için bilgilerinizi doğru giriniz.",
+                    R.string.enter_your_information_completely,
                     Toast.LENGTH_LONG
                 ).show()
             } else {

@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentUploadMediaBinding
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
@@ -200,7 +201,7 @@ class UploadMediaFragment : Fragment() {
 
                         firestore.collection(path).add(mediaMap).addOnSuccessListener {
 
-                            Toast.makeText(requireContext(), "Paylaşım Başarılı", Toast.LENGTH_LONG)
+                            Toast.makeText(requireContext(), R.string.successful_sharing, Toast.LENGTH_LONG)
                                 .show()
                             findNavController().navigateUp()
 

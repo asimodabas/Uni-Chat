@@ -168,9 +168,8 @@ class MediaChatFragment : Fragment() {
                 } else {
                     if (value != null) {
                         if (value.isEmpty) {
-                            Toast.makeText(requireContext(), "Mesaj Yok", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(requireContext(), R.string.no_message, Toast.LENGTH_SHORT).show()
                         } else {
-
                             val documents = value.documents
 
                             mediaArrayList.clear()
@@ -185,7 +184,6 @@ class MediaChatFragment : Fragment() {
                                 val uniMedia = UniMedia(useremail, downloadUrl)
                                 mediaArrayList.add(uniMedia)
                             }
-
                             mediaAdapter.medias = mediaArrayList
                             mediaAdapter.notifyDataSetChanged()
                         }

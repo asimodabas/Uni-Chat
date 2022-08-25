@@ -41,10 +41,10 @@
                         android:id="@+id/medicineImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/health_medicine"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/health_medicine" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/medicineMediaButton"
@@ -142,10 +142,10 @@
                         android:id="@+id/dentistImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/health_dentist"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/health_dentist" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -191,10 +191,10 @@
                         android:id="@+id/nurseImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/health_nurse"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/health_nurse" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/nurseTextView"
@@ -267,10 +267,10 @@
                         android:id="@+id/psychologyImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/health_psychology"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/health_psychology" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
@@ -330,10 +330,10 @@
                         android:id="@+id/pharmacyImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/health_pharmacy"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/health_pharmacy" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -392,10 +392,10 @@
                         android:id="@+id/veterinaryImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/health_veterinary"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/health_veterinary" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -454,10 +454,10 @@
                         android:id="@+id/dieteticsImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/health_dietetics"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/health_dietetics" />
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
@@ -479,10 +479,10 @@
                         android:id="@+id/rehabilitationImageView"
                         android:layout_width="75dp"
                         android:layout_height="75dp"
+                        android:src="@drawable/health_rehabilitation"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/health_rehabilitation" />
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
                         android:id="@+id/rehabilitationMessageButton"

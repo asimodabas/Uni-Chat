@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentCreateBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -20,7 +21,6 @@ class CreateFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,11 +83,10 @@ class CreateFragment : Fragment() {
             } else {
                 Toast.makeText(
                     requireContext(),
-                    "Lütfen Uni-Chat'e kaydolmak için bilgilerinizi eksiksiz giriniz",
+                    R.string.enter_your_information_completely,
                     Toast.LENGTH_SHORT
                 ).show()
             }
-
         }
     }
 
@@ -96,6 +95,4 @@ class CreateFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }
