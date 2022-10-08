@@ -40,7 +40,6 @@ class MediaRecyclerAdapter : RecyclerView.Adapter<MediaRecyclerAdapter.MediaHold
         set(value) = recyclerListDiffer.submitList(value)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MediaHolder {
-
         if (viewType == VİEW_TYPE_MESSAGE_RECEIVED) {
             val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.recycler_row_media, parent, false)
@@ -53,7 +52,6 @@ class MediaRecyclerAdapter : RecyclerView.Adapter<MediaRecyclerAdapter.MediaHold
     }
 
     override fun onBindViewHolder(holder: MediaHolder, position: Int) {
-
         val textView = holder.itemView.findViewById<TextView>(R.id.mediaEmailEditText)
         textView.text = "${medias.get(position).email}"
 
@@ -75,7 +73,6 @@ class MediaRecyclerAdapter : RecyclerView.Adapter<MediaRecyclerAdapter.MediaHold
     }
 
     override fun getItemCount(): Int {
-
         return medias.size
     }
 }

@@ -40,7 +40,6 @@ class CreateFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         binding.createButton.setOnClickListener {
 
             val email = binding.emailEditText.text.toString()

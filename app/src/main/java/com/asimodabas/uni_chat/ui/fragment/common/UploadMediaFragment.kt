@@ -175,7 +175,6 @@ class UploadMediaFragment : Fragment() {
     }
 
     private fun upload(path: String) {
-
         //random uuid
         val uuid = UUID.randomUUID()
         val imageName = "$uuid.jpg"

@@ -8,7 +8,6 @@ import com.google.firebase.ktx.Firebase
 class ForgotPasswordViewModel : ViewModel() {
 
     private val auth = Firebase.auth
-
     val animation = MutableLiveData<Boolean>()
     val errorMessage = MutableLiveData<String>()
     val success = MutableLiveData<Boolean>()

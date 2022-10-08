@@ -54,7 +54,7 @@ class LoginFragment : Fragment() {
             if (TextUtils.isEmpty(email)) {
                 binding.emailText.error = "Lütfen geçerli bir mail adresi giriniz."
             }
-            if (TextUtils.isEmpty(email)) {
+            if (TextUtils.isEmpty(password)) {
                 binding.passwordText.error = "Lütfen geçerli bir şifre giriniz."
             }
 
@@ -81,7 +81,6 @@ class LoginFragment : Fragment() {
         }
 
         binding.textViewForgetPassword.setOnClickListener {
-
             val action =
                 LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment()
             findNavController().navigate(action)

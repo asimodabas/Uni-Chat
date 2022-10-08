@@ -37,7 +37,6 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
         set(value) = recyclerListDiffer.submitList(value)
 
     override fun getItemViewType(position: Int): Int {
-
         val chat = chats.get(position)
         if (chat.user == FirebaseAuth.getInstance().currentUser?.email.toString()) {
             return VİEW_TYPE_MESSAGE_SEND
@@ -47,7 +46,6 @@ class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatHolder {
-
         if (viewType == VİEW_TYPE_MESSAGE_RECEIVED) {
             val view =
                 LayoutInflater.from(parent.context)

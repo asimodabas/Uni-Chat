@@ -160,7 +160,6 @@ class MediaChatFragment : Fragment() {
     }
 
     private fun getData(collectionPath: String) {
-
         firestore.collection(collectionPath).orderBy("date", Query.Direction.DESCENDING)
             .addSnapshotListener { value, error ->
                 if (error != null) {
@@ -193,14 +192,11 @@ class MediaChatFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-
         inflater.inflate(R.menu.lagout_menu, menu)
-
         super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-
         if (item.itemId == R.id.signout) {
             auth.signOut()
 
