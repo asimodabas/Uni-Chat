@@ -1,11 +1,19 @@
 package com.asimodabas.uni_chat.ui.fragment.common
 
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.asimodabas.uni_chat.Constants.DATE
+import com.asimodabas.uni_chat.Constants.TEXT
+import com.asimodabas.uni_chat.Constants.USER
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.adapter.ChatRecyclerAdapter
 import com.asimodabas.uni_chat.databinding.FragmentChatBinding
@@ -30,7 +38,6 @@ class ChatFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setHasOptionsMenu(true)
 
         auth = Firebase.auth
@@ -266,7 +273,7 @@ class ChatFragment : Fragment() {
     }
 
     private fun getChatMessages(collectionPath: String) {
-        firestore.collection(collectionPath).orderBy("date", Query.Direction.ASCENDING)
+        firestore.collection(collectionPath).orderBy(DATE, Query.Direction.ASCENDING)
             .addSnapshotListener { value, error ->
 
                 if (error != null) {
@@ -287,8 +294,8 @@ class ChatFragment : Fragment() {
                             chats.clear() //dump existing messages before loop
 
                             for (document in documents) {
-                                val text = document.get("text") as String
-                                val user = document.get("user") as String
+                                val text = document.get(TEXT) as String
+                                val user = document.get(USER) as String
 
                                 // println(text)
 
@@ -297,12 +304,9 @@ class ChatFragment : Fragment() {
                                 chats.add(chat)
                                 //ChatFragment chats == ChatRecyclerAdapter chats
                                 adapter.chats = chats
-
                             }
                         }
-
                         adapter.notifyDataSetChanged()
-
                     }
                 }
             }

@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.asimodabas.uni_chat.Constants.IMAGES
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentUploadMediaBinding
 import com.google.firebase.Timestamp
@@ -180,13 +181,13 @@ class UploadMediaFragment : Fragment() {
         val imageName = "$uuid.jpg"
 
         val reference = storage.reference
-        val imageReference = reference.child("images").child(imageName)
+        val imageReference = reference.child(IMAGES).child(imageName)
 
         if (selectedImage != null) {
             imageReference.putFile(selectedImage!!).addOnSuccessListener {
                 //download url
 
-                val uploadPictureReferance = storage.reference.child("images").child(imageName)
+                val uploadPictureReferance = storage.reference.child(IMAGES).child(imageName)
                 uploadPictureReferance.downloadUrl.addOnSuccessListener {
                     val downloadUrl = it.toString()
 
@@ -200,7 +201,11 @@ class UploadMediaFragment : Fragment() {
 
                         firestore.collection(path).add(mediaMap).addOnSuccessListener {
 
-                            Toast.makeText(requireContext(), R.string.successful_sharing, Toast.LENGTH_LONG)
+                            Toast.makeText(
+                                requireContext(),
+                                R.string.successful_sharing,
+                                Toast.LENGTH_LONG
+                            )
                                 .show()
                             findNavController().navigateUp()
 

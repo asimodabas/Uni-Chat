@@ -2,11 +2,11 @@ package com.asimodabas.uni_chat.ui.fragment.login.login
 
 import android.os.Bundle
 import android.text.TextUtils
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
@@ -23,9 +23,7 @@ class LoginFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        auth = Firebase.auth
-
-        val currentUser = auth.currentUser
+        val currentUser = Firebase.auth.currentUser
 
         if (currentUser != null) {
             val action =
@@ -52,10 +50,10 @@ class LoginFragment : Fragment() {
             val password = binding.passwordText.text.toString().trim()
 
             if (TextUtils.isEmpty(email)) {
-                binding.emailText.error = "Lütfen geçerli bir mail adresi giriniz."
+                binding.emailText.error = getString(R.string.Please_enter_valid_email_address)
             }
             if (TextUtils.isEmpty(password)) {
-                binding.passwordText.error = "Lütfen geçerli bir şifre giriniz."
+                binding.passwordText.error = getString(R.string.Please_enter_valid_password_address)
             }
 
             if (email.equals("") || password.equals("")) {
@@ -91,7 +89,6 @@ class LoginFragment : Fragment() {
             val action =
                 LoginFragmentDirections.actionLoginFragmentToCreateFragment()
             findNavController().navigate(action)
-
         }
     }
 

@@ -1,12 +1,13 @@
 package com.asimodabas.uni_chat.ui.fragment.login.create
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.asimodabas.uni_chat.Constants.USERS
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentCreateBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -60,7 +61,7 @@ class CreateFragment : Fragment() {
                     dataMap.put("surname", surname)
                     dataMap.put("email", email)
 
-                    firestore.collection("Users").add(dataMap).addOnSuccessListener {
+                    firestore.collection(USERS).add(dataMap).addOnSuccessListener {
 
                         binding.nameEditText.setText("")
                         binding.surnameEditText.setText("")

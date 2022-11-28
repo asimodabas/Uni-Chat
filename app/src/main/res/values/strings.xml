@@ -8,5 +8,6 @@
     <string name="successful_sharing">Paylaşım Başarılı</string>
     <string name="enter_your_information_completely">Lütfen Uni-Chate kaydolmak için bilgilerinizi eksiksiz giriniz</string>
     <string name="Please_enter_valid_email_address">Lütfen geçerli bir mail adresi giriniz</string>
+    <string name="Please_enter_valid_password_address">Lütfen geçerli bir şifre giriniz</string>
 
 </resources>

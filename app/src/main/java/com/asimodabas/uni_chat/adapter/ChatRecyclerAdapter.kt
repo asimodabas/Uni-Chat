@@ -7,14 +7,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.asimodabas.uni_chat.Constants.VİEW_TYPE_MESSAGE_RECEIVED
+import com.asimodabas.uni_chat.Constants.VİEW_TYPE_MESSAGE_SEND
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.model.UniChat
 import com.google.firebase.auth.FirebaseAuth
 
 class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>() {
-
-    private val VİEW_TYPE_MESSAGE_SEND = 1
-    private val VİEW_TYPE_MESSAGE_RECEIVED = 2
 
     class ChatHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

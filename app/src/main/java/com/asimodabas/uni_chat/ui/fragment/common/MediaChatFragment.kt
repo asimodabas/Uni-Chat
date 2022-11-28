@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asimodabas.uni_chat.Constants.DATE
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.adapter.MediaRecyclerAdapter
 import com.asimodabas.uni_chat.databinding.FragmentMediaChatBinding
@@ -160,7 +161,7 @@ class MediaChatFragment : Fragment() {
     }
 
     private fun getData(collectionPath: String) {
-        firestore.collection(collectionPath).orderBy("date", Query.Direction.DESCENDING)
+        firestore.collection(collectionPath).orderBy(DATE, Query.Direction.DESCENDING)
             .addSnapshotListener { value, error ->
                 if (error != null) {
                     Toast.makeText(requireContext(), "Hata", Toast.LENGTH_LONG).show()
@@ -207,7 +208,6 @@ class MediaChatFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
