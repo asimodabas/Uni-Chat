@@ -2,30 +2,19 @@ package com.asimodabas.uni_chat.ui.fragment.login.forgot_password
 
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentForgotPasswordBinding
+import com.asimodabas.uni_chat.viewBinding
 
-class ForgotPasswordFragment : Fragment() {
+class ForgotPasswordFragment : Fragment(R.layout.fragment_forgot_password) {
 
-    private var _binding: FragmentForgotPasswordBinding? = null
-    private val binding get() = _binding!!
+    private val binding by viewBinding(FragmentForgotPasswordBinding::bind)
     private lateinit var viewModel: ForgotPasswordViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
-    ): View {
-        _binding = FragmentForgotPasswordBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -76,10 +65,5 @@ class ForgotPasswordFragment : Fragment() {
                 Toast.makeText(requireContext(), error, Toast.LENGTH_SHORT).show()
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

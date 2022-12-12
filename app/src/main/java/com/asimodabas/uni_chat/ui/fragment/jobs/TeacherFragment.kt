@@ -1,26 +1,16 @@
 package com.asimodabas.uni_chat.ui.fragment.jobs
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentTeacherBinding
+import com.asimodabas.uni_chat.viewBinding
 
-class TeacherFragment : Fragment() {
+class TeacherFragment : Fragment(R.layout.fragment_teacher) {
 
-    private var _binding: FragmentTeacherBinding? = null
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentTeacherBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
+    private val binding by viewBinding(FragmentTeacherBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -123,7 +113,7 @@ class TeacherFragment : Fragment() {
 //Geography
         binding.geographyMediaButton.setOnClickListener {
             val action =
-               TeacherFragmentDirections.actionTeacherFragmentToMediaChatFragment(
+                TeacherFragmentDirections.actionTeacherFragmentToMediaChatFragment(
                     14
                 )
             findNavController().navigate(action)
@@ -152,10 +142,5 @@ class TeacherFragment : Fragment() {
                 )
             findNavController().navigate(action)
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

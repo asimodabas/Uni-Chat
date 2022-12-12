@@ -9,9 +9,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -20,6 +18,7 @@ import androidx.navigation.fragment.navArgs
 import com.asimodabas.uni_chat.Constants.IMAGES
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentUploadMediaBinding
+import com.asimodabas.uni_chat.viewBinding
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -30,10 +29,9 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
 import java.util.*
 
-class UploadMediaFragment : Fragment() {
+class UploadMediaFragment : Fragment(R.layout.fragment_upload_media) {
 
-    private var _binding: FragmentUploadMediaBinding? = null
-    private val binding get() = _binding!!
+    private val binding by viewBinding(FragmentUploadMediaBinding::bind)
     var selectedImage: Uri? = null
     var selectedBitmap: Bitmap? = null
     private lateinit var auth: FirebaseAuth
@@ -41,25 +39,11 @@ class UploadMediaFragment : Fragment() {
     private lateinit var storage: FirebaseStorage
     private val args: UploadMediaFragmentArgs by navArgs()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         auth = Firebase.auth
         firestore = Firebase.firestore
         storage = Firebase.storage
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentUploadMediaBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
         binding.uploadImageView.setOnClickListener {
             selected_image()
@@ -258,10 +242,5 @@ class UploadMediaFragment : Fragment() {
             e.printStackTrace()
         }
         super.onActivityResult(requestCode, resultCode, data)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

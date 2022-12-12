@@ -1,26 +1,16 @@
 package com.asimodabas.uni_chat.ui.fragment.second
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentSecondBinding
+import com.asimodabas.uni_chat.viewBinding
 
-class SecondFragment : Fragment() {
+class SecondFragment : Fragment(R.layout.fragment_second) {
 
-    private var _binding: FragmentSecondBinding? = null
-    private val binding get() = _binding!!
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
+    private val binding by viewBinding(FragmentSecondBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -57,10 +47,5 @@ class SecondFragment : Fragment() {
                 SecondFragmentDirections.actionSecondFragmentToLanguageFragment()
             findNavController().navigate(action)
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

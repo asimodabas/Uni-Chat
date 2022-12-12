@@ -2,27 +2,26 @@ package com.asimodabas.uni_chat.ui.fragment.login.login
 
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentLoginBinding
+import com.asimodabas.uni_chat.viewBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class LoginFragment : Fragment() {
+class LoginFragment : Fragment(R.layout.fragment_login) {
 
-    private var _binding: FragmentLoginBinding? = null
-    private val binding get() = _binding!!
+    private val binding by viewBinding(FragmentLoginBinding::bind)
     private lateinit var auth: FirebaseAuth
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        auth = Firebase.auth
         val currentUser = Firebase.auth.currentUser
 
         if (currentUser != null) {
@@ -30,19 +29,6 @@ class LoginFragment : Fragment() {
                 LoginFragmentDirections.actionLoginFragmentToSecondFragment()
             findNavController().navigate(action)
         }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
         binding.loginButton.setOnClickListener {
 
@@ -90,10 +76,5 @@ class LoginFragment : Fragment() {
                 LoginFragmentDirections.actionLoginFragmentToCreateFragment()
             findNavController().navigate(action)
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

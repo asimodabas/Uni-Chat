@@ -1,7 +1,10 @@
 package com.asimodabas.uni_chat.ui.fragment.common
 
 import android.os.Bundle
-import android.view.*
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -12,6 +15,7 @@ import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.adapter.MediaRecyclerAdapter
 import com.asimodabas.uni_chat.databinding.FragmentMediaChatBinding
 import com.asimodabas.uni_chat.model.UniMedia
+import com.asimodabas.uni_chat.viewBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -21,10 +25,9 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
 
-class MediaChatFragment : Fragment() {
+class MediaChatFragment : Fragment(R.layout.fragment_media_chat) {
 
-    private var _binding: FragmentMediaChatBinding? = null
-    private val binding get() = _binding!!
+    private val binding by viewBinding(FragmentMediaChatBinding::bind)
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
     private lateinit var storage: FirebaseStorage
@@ -32,28 +35,14 @@ class MediaChatFragment : Fragment() {
     private lateinit var mediaAdapter: MediaRecyclerAdapter
     private val args: MediaChatFragmentArgs by navArgs()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         setHasOptionsMenu(true)
 
         auth = Firebase.auth
         firestore = Firebase.firestore
         storage = Firebase.storage
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentMediaChatBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
         mediaArrayList = ArrayList<UniMedia>()
 
         binding.mediaChatRecyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -168,7 +157,11 @@ class MediaChatFragment : Fragment() {
                 } else {
                     if (value != null) {
                         if (value.isEmpty) {
-                            Toast.makeText(requireContext(), R.string.no_message, Toast.LENGTH_SHORT).show()
+                            Toast.makeText(
+                                requireContext(),
+                                R.string.no_message,
+                                Toast.LENGTH_SHORT
+                            ).show()
                         } else {
                             val documents = value.documents
 
@@ -178,8 +171,6 @@ class MediaChatFragment : Fragment() {
 
                                 val useremail = document.get("userEmail") as String
                                 val downloadUrl = document.get("downloadUrl") as String
-
-                                println(downloadUrl)
 
                                 val uniMedia = UniMedia(useremail, downloadUrl)
                                 mediaArrayList.add(uniMedia)
@@ -207,10 +198,5 @@ class MediaChatFragment : Fragment() {
 
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

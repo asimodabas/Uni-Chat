@@ -1,46 +1,31 @@
 package com.asimodabas.uni_chat.ui.fragment.login.create
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.asimodabas.uni_chat.Constants.USERS
 import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.databinding.FragmentCreateBinding
+import com.asimodabas.uni_chat.viewBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class CreateFragment : Fragment() {
+class CreateFragment : Fragment(R.layout.fragment_create) {
 
-    private var _binding: FragmentCreateBinding? = null
-    private val binding get() = _binding!!
+    private val binding by viewBinding(FragmentCreateBinding::bind)
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        firestore = Firebase.firestore
-        auth = Firebase.auth
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentCreateBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        firestore = Firebase.firestore
+        auth = Firebase.auth
+
         binding.createButton.setOnClickListener {
 
             val email = binding.emailEditText.text.toString()
@@ -88,11 +73,5 @@ class CreateFragment : Fragment() {
                 ).show()
             }
         }
-    }
-
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

@@ -1,12 +1,10 @@
 package com.asimodabas.uni_chat.ui.fragment.common
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -18,6 +16,7 @@ import com.asimodabas.uni_chat.R
 import com.asimodabas.uni_chat.adapter.ChatRecyclerAdapter
 import com.asimodabas.uni_chat.databinding.FragmentChatBinding
 import com.asimodabas.uni_chat.model.UniChat
+import com.asimodabas.uni_chat.viewBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FieldValue
@@ -26,36 +25,21 @@ import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class ChatFragment : Fragment() {
+class ChatFragment : Fragment(R.layout.fragment_chat) {
 
-    private var _binding: FragmentChatBinding? = null
-    private val binding get() = _binding!!
+    private val binding by viewBinding(FragmentChatBinding::bind)
     private lateinit var auth: FirebaseAuth
     private lateinit var firestore: FirebaseFirestore
     private lateinit var adapter: ChatRecyclerAdapter
     private var chats = arrayListOf<UniChat>()
     private val args: ChatFragmentArgs by navArgs()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setHasOptionsMenu(true)
 
         auth = Firebase.auth
         firestore = Firebase.firestore
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentChatBinding.inflate(inflater, container, false)
-        val view = binding.root
-        return view
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
         adapter = ChatRecyclerAdapter()
         binding.chatRecyclerView.adapter = adapter
 
@@ -297,8 +281,6 @@ class ChatFragment : Fragment() {
                                 val text = document.get(TEXT) as String
                                 val user = document.get(USER) as String
 
-                                // println(text)
-
                                 val chat = UniChat(user, text)
 
                                 chats.add(chat)
@@ -327,10 +309,5 @@ class ChatFragment : Fragment() {
             findNavController().navigate(action)
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
