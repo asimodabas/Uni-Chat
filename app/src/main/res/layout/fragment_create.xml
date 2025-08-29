@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/add_page_background"
-    tools:context=".ui.fragment.login.create.CreateFragment">
+    tools:context=".ui.fragment.auth.create.CreateFragment">
 
     <EditText
         android:id="@+id/nameEditText"

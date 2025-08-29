@@ -17,9 +17,7 @@ import com.squareup.picasso.Picasso
 
 class MediaRecyclerAdapter : RecyclerView.Adapter<MediaRecyclerAdapter.MediaHolder>() {
 
-    class MediaHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-    }
+    class MediaHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     private val diffUtil = object : DiffUtil.ItemCallback<UniMedia>() {
         override fun areItemsTheSame(oldItem: UniMedia, newItem: UniMedia): Boolean {

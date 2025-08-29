@@ -15,9 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class ChatRecyclerAdapter : RecyclerView.Adapter<ChatRecyclerAdapter.ChatHolder>() {
 
-    class ChatHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-    }
+    class ChatHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     private val diffUtil = object : DiffUtil.ItemCallback<UniChat>() {
         override fun areItemsTheSame(oldItem: UniChat, newItem: UniChat): Boolean {

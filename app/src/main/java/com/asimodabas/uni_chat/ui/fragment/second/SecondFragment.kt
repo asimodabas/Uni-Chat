@@ -15,7 +15,6 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//Public
         binding.PublicButton.setOnClickListener {
             val action =
                 SecondFragmentDirections.actionSecondFragmentToChatFragment(
@@ -23,25 +22,21 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
                 )
             findNavController().navigate(action)
         }
-//Engineer
         binding.engineerButton.setOnClickListener {
             val action =
                 SecondFragmentDirections.actionSecondFragmentToEngineerFragment()
             findNavController().navigate(action)
         }
-//Teacher
         binding.teacherButton.setOnClickListener {
             val action =
                 SecondFragmentDirections.actionSecondFragmentToTeacherFragment()
             findNavController().navigate(action)
         }
-//Health
         binding.healthButton.setOnClickListener {
             val action =
                 SecondFragmentDirections.actionSecondFragmentToHealthFragment()
             findNavController().navigate(action)
         }
-//Language
         binding.languageButton.setOnClickListener {
             val action =
                 SecondFragmentDirections.actionSecondFragmentToLanguageFragment()
