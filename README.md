@@ -24,7 +24,6 @@ App Images
   <img src="https://user-images.githubusercontent.com/71982171/173624944-fb496e94-7db8-4146-af9b-b290fbb2ae0f.png" alt="GIF" />
   <img src="https://user-images.githubusercontent.com/71982171/173624947-e4541dd7-1774-4726-a9bc-0b30bd45db74.png" alt="GIF" />
   <img src="https://user-images.githubusercontent.com/71982171/173624948-e582c46b-ef1b-4491-9610-0b41808a66d5.png" alt="GIF" />
-  <img src="https://user-images.githubusercontent.com/71982171/173624949-e7fe018c-3eed-47a9-b2fc-b6201c6072ca.png" alt="GIF" />
   <img src="https://user-images.githubusercontent.com/71982171/173624953-4df49253-47b6-460a-a748-58eb28bdbfa8.png" alt="GIF" />
 </p>
 
